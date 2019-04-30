@@ -1,0 +1,61 @@
+#why-choose-eduglobal{
+background-color: rgb(241, 241, 241);
+padding: 100px 0;
+
+.item-cover{
+    transition: 0.4s    ;
+    
+.item{
+    width: 100%;
+    background-color: white;
+    padding: 30px 30px 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(224, 224, 224);
+}
+.img{
+    background-color: $color1;
+    width: 65px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 99px;
+        height: 98px;
+        border: 3px solid white;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+}
+&:hover {
+
+.img::after{
+    opacity: 1;
+    width: 88px;
+    height: 88px;
+    top: 8px;
+    left: 8px;
+}
+}
+h4{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+p{
+    opacity: 0.7;
+}
+
+&:hover{
+    margin-top: -10px;
+}
+
+}
+}

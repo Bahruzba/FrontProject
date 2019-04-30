@@ -1,0 +1,90 @@
+#our-courses{
+    margin: 100px 0;
+    .item-cover{
+        margin-bottom: 30px;
+    }
+    .item{
+        box-shadow: 0px 0px 10px 0px #bbbbbb;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .img{
+            overflow: hidden;
+        }
+        img{
+            transition: 0.6s;
+
+        }
+        &:hover .img img{
+            transform: scale(1.1,1.1);
+        }
+        .about-item{
+            padding: 5px 15px;
+            .title-item{
+            font-weight: bold;
+            transition: 0.3s;
+            &:hover{
+                color: $color1;
+            }
+            }
+            p{
+                font-size: 14px;
+                opacity: 0.7;
+            }
+            .rating{
+                display: flex;
+                justify-content: space-between;
+                .left{
+                    color: $color1;
+                }
+                .right{
+                    font-size: 16px;
+                    
+                    .far{
+                        margin: 0 3px 0 10px;
+                    }
+                    .right1{
+                    transition: 0.3s;
+                    &:hover{
+                        color: $color1;
+                    }}
+                    .right2{
+                        transition: 0.3s;
+                        &:hover{
+                            color: $color1;
+                        }}
+                }
+
+            }
+
+            .person{
+                display: flex;
+                justify-content: space-between;
+            }
+            img{
+                border-radius: 50%;
+            }
+            .price{
+                border-radius: 5px;
+                margin: auto 0;
+                text-align: center;
+                line-height: 34px;
+                width: 60px;
+                height: 35px;
+                color: #0c5460;
+                background-color: #d1ecf1
+            }
+
+            .person{
+                transition: 0.3s;
+            &:hover{
+                text-decoration: none;
+                color: $color1;
+            }
+        }
+        }
+}
+.main-button{
+    left: 43%;
+}
+}

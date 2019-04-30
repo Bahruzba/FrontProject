@@ -1,0 +1,76 @@
+#upcoming-events{
+    .header-section{
+    margin-top: 100px;
+}
+.item{
+    margin-bottom: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px #bbbbbb;
+    &:hover img{
+        transform: scale(1.1,1.1);
+
+    }
+    img{
+        width: 100%;
+        transition: 0.5s;
+
+    }
+    .img{
+        overflow: hidden;
+    }
+    .about-item{
+        padding: 15px;
+    
+    h5{
+        font-size: 18px;
+        transition: 0.3s;
+        &:hover{
+            color: $color1;
+        }
+    }
+    p{
+        margin: 0;
+        opacity: 0.7;
+        .fas{
+            margin-left: 10px;
+        }
+        span{
+            color: $color1;
+            font-weight: 500;
+            margin: 5px;
+        }
+    }
+}
+    .time{
+        text-align: center;
+        width: 80px;
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        color: black;
+        border-radius: 5px;
+        overflow: hidden;
+        .up{
+            padding: 5px;
+            background-color: white;
+        font-weight: bold;
+        :first-child{
+            font-size: 25px;
+        }
+        }
+        .down{
+            padding: 5px;
+            background-color: $color1;
+            color: white;
+            font-weight: 500;
+
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
+}
+
+

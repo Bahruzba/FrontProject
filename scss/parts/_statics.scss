@@ -1,0 +1,21 @@
+#statics{
+    background-image: url("../images/counter_bg.jpg");
+    background-position-y: center;
+    background-size: cover;
+    .item{
+        padding: 70px 50px;
+        color: white;
+        text-align: center;
+        p{
+            font-size: 30px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+    .statics{
+        background-color: rgba(0, 31, 63, 0.651);
+    }
+}

@@ -1,0 +1,46 @@
+#online-courses {
+    padding: 80px 80px 0 80px;
+    color: white;
+    background-image: url("../images/pattern_bg.png");
+    background-color: #07294D;
+    .registration{ 
+        padding: 40px;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.1);
+        h2{
+            font-weight: bold;
+            .yellow{
+                color: $color1;
+            }
+        }
+        h5{
+            font-weight: 400;
+            margin: 25px 0;
+            font-size: 17px;
+        }
+        input{
+            padding: 10px 20px;
+            margin: 10px 20px 10px 0;
+            background-color: transparent;
+            border: 1px solid;
+            border-radius: 5px;
+            color: white;
+        }
+        select{
+            padding: 10.5px;
+            width: 216px;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 5px;
+            color: rgba(255, 255, 255, 0.527);
+        }
+        textarea{
+            background-color: transparent;
+            color: white;
+            padding: 16px;
+            margin: 12px 0;
+            border: 1px solid;
+        }
+        
+    }
+}
