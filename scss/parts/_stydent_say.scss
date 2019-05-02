@@ -1,0 +1,36 @@
+#stydent-say {
+  margin: 80px;
+  .header-section{
+      p{
+          margin: 20px 0 0;
+      }
+  }
+  .item {
+    border-radius: 10px;
+    width: 40%;
+    padding: 25px 50px 25px 70px;
+    box-shadow: 0px 0px 10px 0px #bbbbbb;
+    margin: 50px;
+    position: relative;
+    h1{
+        font-weight: 700;
+    }
+    i {
+      color: $color1;
+    }
+    p {
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+    .img {
+      position: absolute;
+      top: 30px;
+      left: -50px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

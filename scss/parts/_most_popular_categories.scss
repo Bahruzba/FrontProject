@@ -1,15 +1,57 @@
 #most-popular-categories {
-.item{
+  margin-bottom: 60px;
+  .header-section {
+    margin-top: 100px;
+  }
+  .items{
+    &:hover .owl-prev{
+      left: 20px;
+      background-color: white;
+      opacity: 1;
+    }
+    &:hover .owl-next{
+      right: 20px;
+      background-color: white;
+      opacity: 1;
+    }
+  }
+  .item {
     text-align: center;
-    padding: 25px 0;
-    border-radius: 5px;
+    padding: 20px 0;
+    border-radius: 10px;
     color: white;
-    i{
-        font-size: 30px;
+    overflow: hidden !important;
+    i {
+      font-size: 30px;
     }
-    p{
-        margin-top: 10px;;
-        font-size: 18px;
+    p {
+      margin-top: 10px;
+      font-size: 18px;
     }
-}
+  }
+
+    .owl-prev {
+      font-size: 40px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        position: absolute;
+        top: 25px;
+        left: -50px;
+        transition: 0.3s;
+        opacity: 0;
+        
+    }
+    .owl-next {
+      font-size: 40px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        position: absolute;
+        top: 25px;
+        right: -50px;
+        transition: 0.3s;
+        opacity: 0;
+    }
+  
 }

@@ -1,0 +1,66 @@
+#our-teachers {
+  background-image: url("../images/teacher_bg.jpg");
+  .container-fluid {
+    background-color: rgba(7, 41, 77, 0.9);
+    padding: 70px 0;
+  }
+  .header-section {
+    color: white;
+    p {
+      opacity: 1;
+    }
+    padding: 20px;
+  }
+  .item {
+    border-radius: 10px;
+    overflow: hidden;
+    .img {
+        background-color: black;
+
+      img{
+          transition: 0.4s;      }
+    }
+    .about-teacher {
+        a{
+            font-weight: 500;
+            color: black;
+            font-size: 22px;
+            transition: 0.3s;
+            &:hover{
+                text-decoration: none;
+                color: $color1;
+            }
+        }
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .icons {
+      color: white;
+      font-size: 18px;
+      position: absolute;
+      left: 50px;
+      top: 200px;
+      transition: 0.5s;
+      opacity: 0;
+      i {
+        padding: 15px;
+        transition: 0.3s;
+        &:hover{
+            color: $color1;
+        }
+      }
+    }
+    &:hover {
+      .img {
+        img {
+          opacity: 0.5;
+        }
+      }
+      .icons{
+          opacity: 1;
+          top: 100px;
+      }
+    }
+  }
+}

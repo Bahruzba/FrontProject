@@ -34,20 +34,20 @@ $(document).ready(function () {
         sliderToRight();
     })
 
-    var autoSlider = window.setInterval(function () {
-        sliderToRight()
-    }, 3000);
+    // var autoSlider = window.setInterval(function () {
+    //     sliderToRight()
+    // }, 3000);
 
 
-    $("#slider").on("mouseover", function () {
-        window.clearInterval(autoSlider);
-    });
+    // $("#slider").on("mouseover", function () {
+    //     window.clearInterval(autoSlider);
+    // });
 
-    $("#slider").on("mouseout", function () {
-        autoSlider = window.setInterval(function () {
-            sliderToRight()
-        }, 3000);
-    })
+    // $("#slider").on("mouseout", function () {
+    //     autoSlider = window.setInterval(function () {
+    //         sliderToRight()
+    //     }, 3000);
+    // })
 
     function sliderToRight() {
         sliderText();
@@ -101,7 +101,7 @@ $(document).ready(function () {
                         $("#about-us .paid").text("162");
                     } else {
                         i = i + 1;
-                        $("#about-us .paid").text(Math.round(i/1.5));
+                        $("#about-us .paid").text(Math.round(i / 1.5));
                     }
                 }, 8);
             }
@@ -115,19 +115,19 @@ $(document).ready(function () {
         autoplay: true,
         margin: 10,
         responsiveClass: true,
-        responsive:{
-            0:{
-                items:1,
-                nav:true
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
             },
-            600:{
-                items:3,
-                nav:true
+            600: {
+                items: 3,
+                nav: true
             },
-            1000:{
-                items:5,
-                nav:true,
-                loop:true
+            1000: {
+                items: 5,
+                nav: true,
+                loop: true
             }
         }
     });
@@ -162,52 +162,94 @@ $(document).ready(function () {
 
 
 
-var students, courses, teachers, award;
+    var students, courses, teachers, award, j = 0;
 
     $(window).scroll(function (e) {
         if ($("html").scrollTop() > 3000) {
-            if (i == 0) {
+            if (j == 0) {
                 students = setInterval(function () {
-                    if (i > 1798) {
+                    if (j > 1798) {
                         clearInterval(students);
                         $("#statics .students").text("1800+");
                     } else {
-                        i = i + 2;
-                        $("#statics .students").text(i+"+");
+                        j = j + 2;
+                        $("#statics .students").text(j + "+");
                     }
                 }, 3);
 
                 courses = setInterval(function () {
-                    if (i >1749) {
+                    if (j > 1749) {
                         clearInterval(courses);
-                        $("#statics .courses").text("69");
+                        $("#statics .courses").text("70");
                     } else {
-                        i = i + 1;
-                        $("#statics .courses").text(Math.round(i/26));
+                        j = j + 1;
+                        $("#statics .courses").text(Math.round(j / 26));
                     }
                 }, 8);
 
                 teachers = setInterval(function () {
-                    if (i > 1800) {
+                    if (j > 1800) {
                         clearInterval(teachers);
                         $("#statics .teachers").text("700+");
-                    } else {  
-                            i = i + 1;
-                        $("#statics .teachers").text(Math.round(i/2.6)+"+");
+                    } else {
+                        j = j + 1;
+                        $("#statics .teachers").text(Math.round(j / 2.6) + "+");
                     }
                 }, 8);
 
                 award = setInterval(function () {
-                    if (i > 1798) {
+                    if (j > 1798) {
                         clearInterval(award);
                         $("#statics .award").text("1200+");
                     } else {
-                        i = i + 2;
-                        $("#statics .award").text(Math.round(i/1.5)+"+");
+                        j = j + 2;
+                        $("#statics .award").text(Math.round(j / 1.5) + "+");
                     }
                 }, 8);
             }
         }
     })
-    
+
+    // our gallery
+    $("#our-gallery .items-name div").click(function () {
+        if ($(this).hasClass("active") == true) {
+            return;
+        } else {
+            var a = $("[" + $(this).attr("item") + "]");
+            $("#our-gallery .items-name .active").removeClass("active");
+            $(this).addClass("active");
+
+
+            $("#our-gallery .item").parent().addClass("dis").removeClass("col-lg-4");
+            $("[" + $(this).attr("item") + "]").removeClass("dis").addClass("col-lg-4");
+        }
+
     })
+
+
+
+
+    $('#stydent-say .items').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        prevArrow: false,
+        nextArrow: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        infinite: true
+          });
+
+
+          $('#our-client .items').slick({
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            prevArrow: false,
+            nextArrow: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+              });
+    
+})

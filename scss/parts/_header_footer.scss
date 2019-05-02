@@ -1,214 +1,367 @@
-.fixed{
-    position: fixed;
-    top: 0;
-    background-color: white;
-    z-index: 3;
+.fixed {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 3;
 }
 
-.main-button{
-    position: relative;
-    width: 180px;
-    height: 50px;
-    font-weight: bold;
-    background-color: $color1;
-    border-style: none;
-    color: white;
-    border-radius: 0.2rem;
-    padding: 5px 15px;
-    overflow: hidden;
+.main-button {
+  position: relative;
+  width: 180px;
+  height: 50px;
+  font-weight: bold;
+  background-color: $color1;
+  border-style: none;
+  color: white;
+  border-radius: 0.2rem;
+  padding: 5px 15px;
+  overflow: hidden;
+  transition: 0.6s;
+
+  &::before {
+    content: "/";
+    font-weight: bolder;
+    font-size: 100px;
+    position: absolute;
+    top: -50px;
+    right: 180px;
     transition: 0.6s;
-
-
-    &::before{
-        content: "/";
-        font-weight: bolder;
-        font-size: 100px;
-        position: absolute;
-        top: -50px;
-        right: 180px;
-        transition: 0.6s;
-        z-index: 0;
-        opacity: 0.7;
-
+    z-index: 0;
+    opacity: 0.7;
+  }
+  &:hover {
+    background-color: $color1-dark;
+    &::before {
+      right: -100px;
     }
-    &:hover{
-        background-color: $color1-dark;
-        &::before{
-        right: -100px;
-        }
-
-    }
+  }
 }
 
-.header-section{
-    
-    h1{
-        font-size: 32px;
-        font-weight: 600;
-        text-align: center;
-    }
-    p{
-        margin: 30px 0;
-        font-size: 16px;
-        opacity: 0.7;
-        text-align: center;
-    }
+.header-section {
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+  }
+  p {
+    margin: 30px 0;
+    font-size: 16px;
+    opacity: 0.7;
+    text-align: center;
+  }
 }
 
 header {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  .discount {
+    width: 100%;
+    background-color: $discount-back-color;
+    padding: 15px 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+    i {
+      font-size: 20px;
+      opacity: 0.5;
+      margin: 0px 12px;
+      vertical-align: -2px;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .contact {
+    width: 100%;
+
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    .main-button {
+      width: 120px;
+      height: 35px;
+      &::before {
+        right: 120px;
+      }
+      &:hover::before {
+        right: -30px;
+      }
+    }
+    .phone-mail {
+      margin-top: 5px;
+      font-size: 14px;
+      padding: 0;
+      i {
+        margin-right: 5px;
+        font-size: 20px;
+      }
+      a {
+        transition: 0.3s;
+        &:hover {
+          color: $color1;
+          text-decoration: none;
+        }
+      }
+    }
+    .social-login {
+      text-align: end;
+      i {
+        margin: 0 8px;
+        transition: 0.3s;
+        &:hover {
+          color: $color1;
+        }
+      }
+
+      a {
+        transition: 0.3s;
+        border-left: 1px solid;
+        &:hover {
+          color: $color1;
+          text-decoration: none;
+          border-left-color: white;
+        }
+      }
+    }
+    a {
+      color: white;
+      padding: 5px 10px;
+    }
+    margin: 0 !important;
+  }
+
+  .navigation {
+    width: 100%;
+
+    .home-link {
+      padding-top: 20px;
+    }
+    .menu,
+    .search {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 30px 14px;
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+      a {
+        color: black;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      ul {
+        display: none;
+        font-weight: 400;
+        position: absolute;
+        z-index: 1;
+        width: 180px;
+        margin-top: 30px;
+        padding: 5px 0 5px 15px;
+        background-color: white;
+        border: 2.5px double gray;
+        li {
+          list-style: none;
+          padding: 8px 0;
+
+          &:hover a {
+            color: $color1;
+          }
+          &:hover i {
+            color: $color1;
+          }
+          i {
+            color: black;
+            margin-left: 90px;
+          }
+          &:hover ul {
+            display: block;
+            position: absolute;
+            left: 175px;
+            top: 0px;
+            width: 220px;
+            a {
+              color: black;
+            }
+            li:hover a {
+              color: $color1;
+            }
+          }
+        }
+      }
+      &:hover {
+        color: $color1;
+        ul {
+          display: block;
+          ul {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .grid-item {
+//   width: 25%;
+// }
+// .grid-item--width2 {
+//   width: 50%;
+// }
+
+footer{
+#training{
+  background-color: $color1;
+  color: white;
+  padding: 40px;
+  .right {
+    transition: all 0.6s;
+    background-color: transparent;
+    border-style: solid;
+    padding: 12px 28px;
+    position: absolute;
+    right: 230px;
+    color: white;
+    overflow: hidden;
+    z-index: 2;
+    // ::before{
+    //     content: "";
+    //     width: 160px!important;
+    //     height: 55px!important;
+    //     position: absolute;
+    //     background-color: white;
+    //     top: -5px;
+    //     left: 0px;
+    //     transition: all 0.6s;
+    //     z-index: 9;
+    // }
+    &:hover::before {
+      transition: all 0.6s;
+      top: -5px;
+      left: -5px;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      width: 160px;
+      height: 55px;
+      position: absolute;
+      background-color: white;
+      top: -5px;
+      left: 170px;
+      transition: all 0.6s;
+    }
+    &:hover {
+      transition: 0.3s;
+      color: $color1;
+      &::after {
+        z-index: -1;
+        transition: 0.6s;
+        top: -5px;
+        left: -5px;
+        transition: 0s;
+        transition-delay: 0.6s;
+      }
+    }
+  }
+}
+#navigation{
+  padding: 60px 0;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  .contact{
+    width: 25%;
+  }
+  i{
+    margin-right: 10px;
+  }
+  a{
+    color: white;
+    transition: 0.3s;
+    &:hover{
+      color: $color1;
+      text-decoration: none;
+    }
+  }
+
+  .navigation-footer{
+    padding: 0 40px 0 20px;
+    
+    ul{
+      padding: 0;
+    li{
+      transition: 0.3s;
+      list-style: none;
+      padding-bottom: 10px;
+      &:hover{
+        margin-left: 10px;
+      }
+    }
+    }
+  }
+  h5{
+    padding: 12px 0 19px 0;
+  }
+  .posts{
+    padding-right: 15px;
+    p{
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    
+  .post span {
+    p:nth-child(1){
+      transition: 0.3s;
+      &:hover{
+        color: $color1;
+      }
+    }
+  p:nth-child(2){
+    opacity: 0.7;
+  }
+}
+  width: 280px;
+}
+.subscribe{
+  width: 300px;
+  form{
+    width: 275px;
+    padding: 5px;
+    background-color: white;
+    input{
+      border-style: none;
+    }
+    .main-button{
+      text-align: end;
+      padding-right: 10px;
+      width: 80px;
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+  p{
+    font-size: 16px;
+    padding: 10px 0;
     margin: 0;
-    padding: 0;
-    font-family:$font-family;
-    .discount{
-        width: 100%;
-        background-color: $discount-back-color;
-        padding: 15px 0;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-        a{
-            color: white;
-            text-decoration: underline;
-        }
-        i{
-            font-size: 20px;
-            opacity: 0.5;
-            margin: 0px 12px;
-            vertical-align: -2px;
-            transition: 0.3s;
-            
-            &:hover{
-                opacity: 0.7;
-            }
+  }
+  i{
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.226);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 3px;
+    transition: 0.3s;
+    &:hover{
+      color: $color1;
     }
-    }
-    .contact{
-        width: 100%;
-
-        background-color: #343a40;
-        color: white;
-        padding: 10px;
-        .main-button{
-            width: 120px;
-            height: 35px;
-            &::before{
-                right: 120px;
-            }
-                &:hover::before{
-                    right: -30px;
-                }
-        }
-        .phone-mail{
-            margin-top: 5px;
-            font-size: 14px;
-            padding: 0;
-            i{
-                margin-right: 5px;
-                font-size: 20px;
-            }
-            a{
-            transition: 0.3s;
-            &:hover{
-                color: $color1;
-                text-decoration: none;
-            }
-        }
-        }
-        .social-login{
-            text-align: end;
-            i{
-                margin: 0 8px;
-                transition: 0.3s;
-                &:hover{
-                    color: $color1;
-                }
-            }
-
-            a{
-                transition: 0.3s;
-                border-left: 1px solid;
-                &:hover{
-                    color: $color1;
-                    text-decoration: none;
-                    border-left-color: white;
-                }
-            }
-        }
-        a{
-            color: white;
-            padding: 5px 10px;
-        }
-    }
-
-    .navigation{
-        width: 100%;
-
-        .home-link{
-            padding-top: 20px
-        }
-        .menu,.search{
-            font-size: 14px;
-            font-weight: 600;
-            padding: 30px 14px;
-            transition: 0.3s;
-            cursor: pointer;
-            position: relative;
-            a{
-                color: black;
-                text-decoration: none;
-                transition: all 0.3s;
-            }
-            ul{
-                display: none;
-                font-weight: 400;
-                position: absolute;
-                z-index: 1;
-                width: 180px;
-                margin-top: 30px;
-                padding: 5px 0 5px 15px;
-                background-color: white;
-                border: 2.5px double gray;
-                li{
-                    list-style: none;
-                    padding: 8px 0;
-                    
-                    &:hover a{
-                        color: $color1;
-                    
-                }
-                &:hover i{
-                    color: $color1;
-                
-                }
-                    i{
-                        color: black;
-                        margin-left: 90px;
-                    }
-                    &:hover ul{
-                            display: block;
-                            position: absolute;
-                            left: 175px;
-                            top: 0px;
-                            width: 220px;
-                            a{
-                                color: black;
-                            }
-                            li:hover a{
-                                color: $color1;
-                            }
-                        }
-                        
-                }
-            }
-            &:hover{
-                color: $color1;
-                ul{
-                    display: block;
-                    ul{
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
+  }
+}
+}
 }
