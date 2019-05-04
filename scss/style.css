@@ -1,5 +1,7 @@
 .fixed {
-  position: fixed;
+  position: fixed !important;
+  margin: 0;
+  width: 100% !important;
   top: 0;
   background-color: white;
   z-index: 3;
@@ -55,6 +57,7 @@
 }
 
 header {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -88,88 +91,112 @@ header .discount i:hover {
 }
 
 header .contact {
-  width: 100%;
   background-color: #343a40;
-  color: white;
-  padding: 10px;
-  margin: 0 !important;
 }
 
-header .contact .main-button {
+header .contact .row {
+  margin: 0 auto;
+  width: 1100px;
+  color: white;
+  padding: 10px;
+}
+
+header .contact .row .main-button {
   width: 120px;
   height: 35px;
 }
 
-header .contact .main-button::before {
+header .contact .row .main-button::before {
   right: 120px;
 }
 
-header .contact .main-button:hover::before {
+header .contact .row .main-button:hover::before {
   right: -30px;
 }
 
-header .contact .phone-mail {
+header .contact .row .phone-mail {
   margin-top: 5px;
   font-size: 14px;
   padding: 0;
 }
 
-header .contact .phone-mail i {
+header .contact .row .phone-mail i {
   margin-right: 5px;
   font-size: 20px;
 }
 
-header .contact .phone-mail a {
+header .contact .row .phone-mail a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-header .contact .phone-mail a:hover {
+header .contact .row .phone-mail a:hover {
   color: #FFBC09;
   text-decoration: none;
 }
 
-header .contact .social-login {
+header .contact .row .social-login {
+  padding: 0;
   text-align: end;
 }
 
-header .contact .social-login i {
-  margin: 0 8px;
+header .contact .row .social-login i {
+  margin: 0 7px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-header .contact .social-login i:hover {
+header .contact .row .social-login i:hover {
   color: #FFBC09;
 }
 
-header .contact .social-login a {
+header .contact .row .social-login a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-left: 1px solid;
 }
 
-header .contact .social-login a:hover {
+header .contact .row .social-login a:hover {
   color: #FFBC09;
   text-decoration: none;
   border-left-color: white;
 }
 
-header .contact a {
+header .contact .row a {
   color: white;
   padding: 5px 10px;
 }
 
 header .navigation {
-  width: 100%;
+  margin: 0 auto;
+  width: 1200px;
+  height: 80px;
+}
+
+header .navigation .menues {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 0px;
+  overflow: hidden;
 }
 
 header .navigation .home-link {
   padding-top: 20px;
 }
 
+header .navigation .menues-down {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
 header .navigation .menu,
 header .navigation .search {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   font-size: 14px;
   font-weight: 600;
   padding: 30px 14px;
@@ -177,6 +204,11 @@ header .navigation .search {
   transition: 0.3s;
   cursor: pointer;
   position: relative;
+}
+
+header .navigation .menu:hover,
+header .navigation .search:hover {
+  color: #FFBC09;
 }
 
 header .navigation .menu a,
@@ -206,54 +238,21 @@ header .navigation .search ul li {
   padding: 8px 0;
 }
 
-header .navigation .menu ul li:hover a,
-header .navigation .search ul li:hover a {
-  color: #FFBC09;
-}
-
-header .navigation .menu ul li:hover i,
-header .navigation .search ul li:hover i {
-  color: #FFBC09;
-}
-
 header .navigation .menu ul li i,
 header .navigation .search ul li i {
   color: black;
   margin-left: 90px;
 }
 
-header .navigation .menu ul li:hover ul,
-header .navigation .search ul li:hover ul {
-  display: block;
-  position: absolute;
-  left: 175px;
-  top: 0px;
-  width: 220px;
-}
-
-header .navigation .menu ul li:hover ul a,
-header .navigation .search ul li:hover ul a {
-  color: black;
-}
-
-header .navigation .menu ul li:hover ul li:hover a,
-header .navigation .search ul li:hover ul li:hover a {
-  color: #FFBC09;
-}
-
-header .navigation .menu:hover,
-header .navigation .search:hover {
-  color: #FFBC09;
-}
-
-header .navigation .menu:hover ul,
-header .navigation .search:hover ul {
-  display: block;
-}
-
-header .navigation .menu:hover ul ul,
-header .navigation .search:hover ul ul {
+header .navigation .menu-icon {
   display: none;
+  line-height: 80px;
+  text-align: end;
+}
+
+header .navigation .menu-icon i {
+  padding: 0 6px;
+  font-size: 20px;
 }
 
 footer #training {
@@ -273,6 +272,17 @@ footer #training .right {
   color: white;
   overflow: hidden;
   z-index: 2;
+}
+
+footer #training .right::before {
+  content: "";
+  width: 160px !important;
+  height: 55px !important;
+  position: absolute;
+  background-color: white;
+  top: -5px;
+  left: -200px;
+  z-index: 9;
 }
 
 footer #training .right:hover::before {
@@ -389,13 +399,14 @@ footer #navigation .subscribe {
 }
 
 footer #navigation .subscribe form {
-  width: 275px;
+  width: 260px;
   padding: 5px;
   background-color: white;
 }
 
 footer #navigation .subscribe form input {
   border-style: none;
+  width: 160px;
 }
 
 footer #navigation .subscribe form .main-button {
@@ -438,7 +449,7 @@ footer #navigation .subscribe i:hover {
 }
 
 #slider .slider-item {
-  height: 800px;
+  height: 900px;
   overflow: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -447,6 +458,10 @@ footer #navigation .subscribe i:hover {
 }
 
 #slider .slider-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: none;
+     object-fit: none;
   margin-top: -100px;
   opacity: 0.5;
 }
@@ -454,7 +469,8 @@ footer #navigation .subscribe i:hover {
 #slider .slider-item .text-slider {
   position: absolute;
   top: 35%;
-  left: 23%;
+  margin-left: -400px;
+  left: 50%;
   color: white;
   text-align: center;
 }
@@ -467,7 +483,7 @@ footer #navigation .subscribe i:hover {
 
 #slider .slider-item .text-slider h5 {
   font-size: 18px;
-  margin: 40px 0;
+  margin: 50px 0;
 }
 
 #slider .slider-item .text-slider .buttons {
@@ -493,6 +509,16 @@ footer #navigation .subscribe i:hover {
   color: white;
   overflow: hidden;
   z-index: 2;
+}
+
+#slider .slider-item .text-slider .buttons .right::before {
+  content: "";
+  width: 160px;
+  height: 55px;
+  position: absolute;
+  background-color: white;
+  top: -5px;
+  left: -230px;
 }
 
 #slider .slider-item .text-slider .buttons .right:hover::before {
@@ -561,6 +587,7 @@ footer #navigation .subscribe i:hover {
 }
 
 #slider .right {
+  width: 151px;
   right: 30px;
   padding-left: 21px;
 }
@@ -679,7 +706,7 @@ footer #navigation .subscribe i:hover {
   line-height: 50px;
   position: absolute;
   top: 25px;
-  left: -50px;
+  left: -20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
@@ -692,10 +719,14 @@ footer #navigation .subscribe i:hover {
   line-height: 50px;
   position: absolute;
   top: 25px;
-  right: -50px;
+  right: -20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
+}
+
+#about-us .col-lg-12 {
+  padding: 0;
 }
 
 #about-us .about-us {
@@ -703,14 +734,13 @@ footer #navigation .subscribe i:hover {
           box-shadow: 0px 0px 10px 0px #bbbbbb;
   margin: auto 0;
   margin-right: -50px;
-  margin-left: -170px;
-  border-radius: 200px;
+  border-radius: 0 200px 200px 0;
   z-index: 1;
   background-color: white;
 }
 
 #about-us .about-us .info {
-  padding: 40px 40px 60px 220px;
+  padding: 30px 40px 30px 30px;
 }
 
 #about-us .about-us .info h1 {
@@ -743,11 +773,14 @@ footer #navigation .subscribe i:hover {
 
 #about-us .image {
   position: relative;
-  background-color: black;
+  min-width: 700px;
 }
 
 #about-us .image img {
   opacity: 0.5;
+  width: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
 
 #about-us .image i {
@@ -789,13 +822,14 @@ footer #navigation .subscribe i:hover {
 #about-us .video {
   position: relative;
   margin-top: -500px;
-  z-index: 10000;
+  z-index: 4;
 }
 
 #about-us .video iframe {
   width: 100%;
   height: 555px;
-  z-index: 3;
+  z-index: 10;
+  position: absolute;
 }
 
 #about-us .video::after {
@@ -805,7 +839,7 @@ footer #navigation .subscribe i:hover {
   display: block;
   color: white;
   top: -35px;
-  right: 265px;
+  right: 250px;
   font-size: 25px;
 }
 
@@ -813,7 +847,7 @@ footer #navigation .subscribe i:hover {
   content: "";
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 2000px;
   height: 800px;
   background-color: black;
   opacity: 0.8;
@@ -899,8 +933,18 @@ footer #navigation .subscribe i:hover {
   display: none !important;
 }
 
+.d-none::before {
+  display: none;
+}
+
 #our-courses {
   margin: 100px 0;
+}
+
+#our-courses .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #our-courses .item-cover {
@@ -916,9 +960,11 @@ footer #navigation .subscribe i:hover {
 
 #our-courses .item .img {
   overflow: hidden;
+  text-align: center;
 }
 
 #our-courses .item img {
+  width: 100%;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
@@ -995,7 +1041,12 @@ footer #navigation .subscribe i:hover {
           justify-content: space-between;
 }
 
+#our-courses .item .about-item .person .person-profil {
+  min-width: 170px;
+}
+
 #our-courses .item .about-item img {
+  max-width: 60px;
   border-radius: 50%;
 }
 
@@ -1021,7 +1072,8 @@ footer #navigation .subscribe i:hover {
 }
 
 #our-courses .main-button {
-  left: 43%;
+  left: 50%;
+  margin-left: -85px;
 }
 
 #statics {
@@ -1405,6 +1457,7 @@ footer #navigation .subscribe i:hover {
 }
 
 #our-teachers .item {
+  margin-bottom: 10px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -1414,6 +1467,7 @@ footer #navigation .subscribe i:hover {
 }
 
 #our-teachers .item .img img {
+  width: 100%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -1522,6 +1576,7 @@ footer #navigation .subscribe i:hover {
 }
 
 #our-blog .items .item {
+  margin-bottom: 40px;
   background-color: white;
   -webkit-box-shadow: 0px 0px 10px 0px #bbbbbb;
           box-shadow: 0px 0px 10px 0px #bbbbbb;
@@ -1534,6 +1589,7 @@ footer #navigation .subscribe i:hover {
 }
 
 #our-blog .items .item .img img {
+  width: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1714,5 +1770,52 @@ footer #navigation .subscribe i:hover {
 #our-client img {
   width: 80%;
   opacity: 0.7;
+}
+
+#training button {
+  right: 50% !important;
+  margin-right: -80px !important;
+  border-color: white;
+}
+
+#free {
+  background-image: url("../images/about_bg.jpg");
+  background-size: cover;
+  background-position-y: center;
+}
+
+#free .container-fluid {
+  padding: 80px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#free .container-fluid a {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#free .container-fluid a:hover {
+  text-decoration: none;
+  color: #FFBC09;
+}
+
+#free .container-fluid h1 {
+  color: white;
+  font-weight: bold;
+}
+
+#free .container-fluid h5 {
+  color: white;
+  line-height: 50px;
+}
+
+#statics {
+  background-color: #f8f8f8;
+  background-image: none;
+}
+
+#statics .item {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

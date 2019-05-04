@@ -1,0 +1,291 @@
+@media screen and (min-width: 992px) {
+  .menues {
+    height: 80px !important;
+  }
+  .menu > i {
+    transition: 0.3s;
+  }
+  .menu:hover.menu > ul {
+    display: block !important;
+  }
+  .menu i {
+    color: black !important;
+  }
+  .menu:hover i {
+    color: #ffbc09 !important;
+  }
+  .menu ul {
+    display: none;
+    font-weight: 400;
+    position: absolute;
+    z-index: 1;
+    width: 180px;
+    margin-top: 30px;
+    padding: 5px 0 5px 15px;
+    background-color: white;
+    border: 2.5px double gray;
+  }
+  .menu ul li {
+    list-style: none;
+    padding: 8px 0;
+  }
+  .menu ul li i {
+    color: black;
+  }
+  .menu ul li:hover a {
+    color: #ffbc09;
+  }
+  .menu ul li:hover i {
+    color: #ffbc09;
+  }
+  .menu ul li:hover ul {
+    display: block !important;
+    position: absolute;
+    left: 175px;
+    top: 0px;
+    width: 220px;
+  }
+  .menu ul li ul a {
+    color: black !important;
+  }
+  .menu ul li ul li:hover a {
+    color: #ffbc09 !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation {
+    width: 950px !important;
+  }
+  .fixed {
+    width: 100% !important;
+  }
+  .contact .row {
+    width: 950px !important;
+  }
+  .navigation .menu {
+    padding: 30px 8px !important;
+  }
+  #about-us .image {
+    min-width: 500px;
+  }
+  #online-courses textarea {
+    width: 95%;
+  }
+  #navigation .row > div {
+    width: 50% !important;
+    padding: 0 20px 40px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .fixed {
+    width: 100% !important;
+  }
+  .navigation {
+    width: 100% !important;
+  }
+  .navigation > .row {
+    position: relative;
+  }
+  .contact {
+    padding: 0 30px;
+  }
+  .contact .row {
+    width: 100% !important;
+  }
+  .navigation .menues > ul {
+    display: block !important;
+  }
+  .navigation .menues {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 4;
+    background-color: white;
+    width: 100% !important;
+    max-width: 100%;
+  }
+  .menues .menu i{
+    color: white!important;
+  }
+  .search {
+    display: none;
+  }
+  .navigation .menues .menu {
+    padding: 12px !important;
+  }
+  .navigation .menues .menu > ul {
+    position: static;
+    left: 80px;
+    border-style: none;
+    margin: 0 0 -20px;
+  }
+
+  .navigation .menues .menu > ul > li > ul {
+    position: static !important;
+    border-style: none;
+    margin: 0 0 -20px;
+  }
+
+  .navigation .menu-icon {
+    display: block !important;
+  }
+  .text-slider {
+    width: 500px;
+    margin-left: -250px !important;
+  }
+  .text-slider h1 {
+    width: 100% !important;
+    font-size: 25px !important;
+  }
+  .text-slider h5 {
+    margin: 30px auto !important;
+    font-size: 14px !important;
+    width: 80%;
+  }
+
+  .text-slider .right {
+    right: 90px !important;
+  }
+
+  #why-choose-eduglobal .item-cover {
+    margin: 20px 0;
+  }
+  #why-choose-eduglobal .item-cover .item {
+    padding: 10px;
+  }
+
+  #about-us .d-flex {
+    margin: 0 !important;
+    display: inline !important;
+  }
+
+  #about-us .about-us {
+    border-radius: 0;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  #online-courses button {
+    left: 50%;
+    margin-left: -90px;
+  }
+  #online-courses img {
+    width: 100% !important;
+  }
+  #upcoming-events .about-item {
+    padding: 10px !important;
+  }
+  #upcoming-events p {
+    font-size: 12px;
+  }
+  #upcoming-events p span {
+    margin: 0 !important;
+  }
+  #our-blog .about-share a {
+    margin-right: 60px !important;
+  }
+  #training {
+    padding: 10px !important;
+    height: 180px;
+  }
+  .training .col-lg-6 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .social-login,
+  .phone-mail {
+    text-align: center !important;
+    padding: 10px 0 !important;
+  }
+  #about-us .image {
+    width: 100% !important;
+    min-width: 250px !important;
+  }
+  #online-courses {
+    padding: 0px !important;
+  }
+  #upcoming-events .about-item {
+    padding: 15px !important;
+  }
+  #upcoming-events p {
+    font-size: 16px;
+  }
+  #our-blog .about-share a {
+    margin-right: 20px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .navigation img {
+    width: 150px;
+  }
+
+  .fixed .row {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .menu-icon {
+    padding-right: 40px !important;
+  }
+  header .navigation > .row {
+    padding: 10px !important;
+  }
+
+  footer .navigation > .row {
+    padding: 10px !important;
+  }
+
+  .slider .text-slider {
+    width: 400px;
+    margin-left: -200px !important;
+  }
+  .slider .left {
+    left: 5px !important;
+  }
+  .slider .right {
+    top: 80px !important;
+    right: 120px !important;
+  }
+  #free .col-sm-6{
+    text-align: center!important;
+  }
+  #online-courses .registration {
+    padding: 20px !important;
+  }
+  #online-courses form {
+    text-align: center;
+  }
+  #online-courses input {
+    margin: 10px !important;
+  }
+
+  #online-courses textarea {
+    width: 217px !important;
+  }
+  #online-courses button {
+    left: 3%;
+    margin-left: -20px;
+  }
+
+  #our-gallery .items-name div {
+    padding: 5px 0 !important;
+    margin: 0 5px !important;
+  }
+  #training {
+    padding: 10px !important;
+    height: 280px;
+  }
+  #navigation input {
+    width: 100px !important;
+  }
+  #navigation form {
+    width: 200px !important;
+  }
+  #navigation .row > div {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+}

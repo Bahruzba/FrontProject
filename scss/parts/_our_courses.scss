@@ -1,5 +1,8 @@
 #our-courses{
     margin: 100px 0;
+    .container{
+        justify-content: center;
+    }
     .item-cover{
         margin-bottom: 30px;
     }
@@ -10,8 +13,10 @@
 
         .img{
             overflow: hidden;
+            text-align: center;
         }
         img{
+            width: 100%;
             transition: 0.6s;
 
         }
@@ -60,8 +65,12 @@
             .person{
                 display: flex;
                 justify-content: space-between;
+                .person-profil{
+                    min-width: 170px;
+                }
             }
             img{
+                max-width: 60px;
                 border-radius: 50%;
             }
             .price{
@@ -85,6 +94,7 @@
         }
 }
 .main-button{
-    left: 43%;
+    left: 50%;
+    margin-left: -85px;
 }
 }

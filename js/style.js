@@ -1,8 +1,31 @@
 $(document).ready(function () {
 
+
     $(".discount i").click(function () {
         $(".discount").remove();
     });
+
+    // toggle menu
+    $("#header .menu-icon .fa-bars").click(function () {
+        $(".navigation .menues").toggleClass("menues-down");
+    })
+
+    $("#header .menu span").click(function () {
+        console.log("vurduuuuuuuuu");
+    
+        if($(this).parent().children("ul").hasClass("d-block")==true){
+            $(this).parent().children("ul").removeClass("d-block");
+            return;
+        };
+        $("#header .menu").children(".d-block").removeClass("d-block");
+        $(this).parent().children("ul").toggleClass("d-block");
+    })
+    $("#header .menu ul li").click(function(){
+        console.log("yeeee");
+        $(this).children("ul").toggleClass("d-block");
+        $("this").parent().addClass("d-none");
+
+    })
 
     // Scroll Header
     $(window).scroll(function (e) {
@@ -34,20 +57,20 @@ $(document).ready(function () {
         sliderToRight();
     })
 
-    // var autoSlider = window.setInterval(function () {
-    //     sliderToRight()
-    // }, 3000);
+    var autoSlider = window.setInterval(function () {
+        sliderToRight()
+    }, 3000);
 
 
-    // $("#slider").on("mouseover", function () {
-    //     window.clearInterval(autoSlider);
-    // });
+    $("#slider").on("mouseover", function () {
+        window.clearInterval(autoSlider);
+    });
 
-    // $("#slider").on("mouseout", function () {
-    //     autoSlider = window.setInterval(function () {
-    //         sliderToRight()
-    //     }, 3000);
-    // })
+    $("#slider").on("mouseout", function () {
+        autoSlider = window.setInterval(function () {
+            sliderToRight()
+        }, 3000);
+    })
 
     function sliderToRight() {
         sliderText();
@@ -81,9 +104,9 @@ $(document).ready(function () {
 
     // Number courses
     var i = 0, free, paid;
-
+    var aboutUs = $("#about-us").position().top;
     $(window).scroll(function (e) {
-        if ($("html").scrollTop() > 1250) {
+        if ($("html").scrollTop() > aboutUs - 460) {
             if (i == 0) {
                 free = setInterval(function () {
                     if (i > 259) {
@@ -135,6 +158,8 @@ $(document).ready(function () {
     // function for close video about us
     function closeVideo() {
         $("#about-us .video").addClass("d-none");
+        $("#about-us .video .col-lg-8").addClass("d-none");
+
         $("#about-us .video iframe").remove();
 
     }
@@ -142,6 +167,8 @@ $(document).ready(function () {
     //open video about us
     $("#about-us i").click(function () {
         $("#about-us .video").removeClass("d-none");
+        $("#about-us .video .col-lg-8").removeClass("d-none");
+
         if ($("#about-us .video iframe").length == 0) {
             $("#about-us .video .w-100").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/7e90gBu4pas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
         }
@@ -161,11 +188,11 @@ $(document).ready(function () {
     })
 
 
-
+    // number section statics
     var students, courses, teachers, award, j = 0;
-
+    var statics = $("#statics").position().top;
     $(window).scroll(function (e) {
-        if ($("html").scrollTop() > 3000) {
+        if ($("html").scrollTop() > statics - 580) {
             if (j == 0) {
                 students = setInterval(function () {
                     if (j > 1798) {
@@ -220,8 +247,8 @@ $(document).ready(function () {
             $(this).addClass("active");
 
 
-            $("#our-gallery .item").parent().addClass("dis").removeClass("col-lg-4");
-            $("[" + $(this).attr("item") + "]").removeClass("dis").addClass("col-lg-4");
+            $("#our-gallery .item").parent().addClass("dis").removeClass("col-4");
+            $("[" + $(this).attr("item") + "]").removeClass("dis").addClass("col-4");
         }
 
     })
@@ -236,20 +263,37 @@ $(document).ready(function () {
         prevArrow: false,
         nextArrow: false,
         autoplay: true,
+        autoplaySpeed: 20000,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
+
+    $('#our-client .items').slick({
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        prevArrow: false,
+        nextArrow: false,
+        autoplay: true,
         autoplaySpeed: 3000,
-        infinite: true
-          });
+        infinite: true,
+    });
 
-
-          $('#our-client .items').slick({
-            infinite: true,
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            prevArrow: false,
-            nextArrow: false,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            infinite: true,
-              });
-    
 })

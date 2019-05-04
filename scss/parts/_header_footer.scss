@@ -1,5 +1,7 @@
 .fixed {
-  position: fixed;
+  position: fixed!important;
+  margin: 0;
+  width: 100%!important;
   top: 0;
   background-color: white;
   z-index: 3;
@@ -52,6 +54,7 @@
 }
 
 header {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: $font-family;
@@ -79,9 +82,12 @@ header {
     }
   }
   .contact {
-    width: 100%;
-
     background-color: #343a40;
+  }
+  .contact .row {
+    margin: 0 auto;
+    width: 1100px;
+
     color: white;
     padding: 10px;
     .main-button {
@@ -111,9 +117,10 @@ header {
       }
     }
     .social-login {
+      padding: 0;
       text-align: end;
       i {
-        margin: 0 8px;
+        margin: 0 7px;
         transition: 0.3s;
         &:hover {
           color: $color1;
@@ -134,23 +141,38 @@ header {
       color: white;
       padding: 5px 10px;
     }
-    margin: 0 !important;
   }
 
   .navigation {
-    width: 100%;
+    margin: 0 auto;
+    width: 1200px;
+    height: 80px;
 
+    .menues{
+      transition: 0.3s;
+      height: 0px;
+      overflow: hidden;
+    }
     .home-link {
       padding-top: 20px;
     }
+    .menues-down{
+      transition: 0.3s;
+      height: fit-content!important;
+      // overflow: hidden;
+    }
     .menu,
     .search {
+      min-width: fit-content;
       font-size: 14px;
       font-weight: 600;
       padding: 30px 14px;
       transition: 0.3s;
       cursor: pointer;
       position: relative;
+      &:hover{
+        color: $color1;
+      }
       a {
         color: black;
         text-decoration: none;
@@ -169,40 +191,21 @@ header {
         li {
           list-style: none;
           padding: 8px 0;
-
-          &:hover a {
-            color: $color1;
-          }
-          &:hover i {
-            color: $color1;
-          }
           i {
             color: black;
             margin-left: 90px;
           }
-          &:hover ul {
-            display: block;
-            position: absolute;
-            left: 175px;
-            top: 0px;
-            width: 220px;
-            a {
-              color: black;
-            }
-            li:hover a {
-              color: $color1;
-            }
-          }
+
         }
       }
-      &:hover {
-        color: $color1;
-        ul {
-          display: block;
-          ul {
-            display: none;
-          }
-        }
+    }
+    .menu-icon {
+      display: none;
+      line-height: 80px;
+      text-align: end;
+      i {
+        padding: 0 6px;
+        font-size: 20px;
       }
     }
   }
@@ -215,153 +218,153 @@ header {
 //   width: 50%;
 // }
 
-footer{
-#training{
-  background-color: $color1;
-  color: white;
-  padding: 40px;
-  .right {
-    transition: all 0.6s;
-    background-color: transparent;
-    border-style: solid;
-    padding: 12px 28px;
-    position: absolute;
-    right: 230px;
+footer {
+  #training {
+    background-color: $color1;
     color: white;
-    overflow: hidden;
-    z-index: 2;
-    // ::before{
-    //     content: "";
-    //     width: 160px!important;
-    //     height: 55px!important;
-    //     position: absolute;
-    //     background-color: white;
-    //     top: -5px;
-    //     left: 0px;
-    //     transition: all 0.6s;
-    //     z-index: 9;
-    // }
-    &:hover::before {
+    padding: 40px;
+    .right {
       transition: all 0.6s;
-      top: -5px;
-      left: -5px;
-      z-index: -1;
-    }
-    &::after {
-      content: "";
-      width: 160px;
-      height: 55px;
+      background-color: transparent;
+      border-style: solid;
+      padding: 12px 28px;
       position: absolute;
-      background-color: white;
-      top: -5px;
-      left: 170px;
-      transition: all 0.6s;
-    }
-    &:hover {
-      transition: 0.3s;
-      color: $color1;
-      &::after {
-        z-index: -1;
-        transition: 0.6s;
+      right: 230px;
+      color: white;
+      overflow: hidden;
+      z-index: 2;
+      &::before {
+        content: "";
+        width: 160px !important;
+        height: 55px !important;
+        position: absolute;
+        background-color: white;
+        top: -5px;
+        left: -200px;
+        z-index: 9;
+      }
+      &:hover::before {
+        transition: all 0.6s;
         top: -5px;
         left: -5px;
-        transition: 0s;
-        transition-delay: 0.6s;
+        z-index: -1;
       }
-    }
-  }
-}
-#navigation{
-  padding: 60px 0;
-  background-color: rgb(39, 39, 39);
-  color: white;
-  .contact{
-    width: 25%;
-  }
-  i{
-    margin-right: 10px;
-  }
-  a{
-    color: white;
-    transition: 0.3s;
-    &:hover{
-      color: $color1;
-      text-decoration: none;
-    }
-  }
-
-  .navigation-footer{
-    padding: 0 40px 0 20px;
-    
-    ul{
-      padding: 0;
-    li{
-      transition: 0.3s;
-      list-style: none;
-      padding-bottom: 10px;
-      &:hover{
-        margin-left: 10px;
+      &::after {
+        content: "";
+        width: 160px;
+        height: 55px;
+        position: absolute;
+        background-color: white;
+        top: -5px;
+        left: 170px;
+        transition: all 0.6s;
       }
-    }
-    }
-  }
-  h5{
-    padding: 12px 0 19px 0;
-  }
-  .posts{
-    padding-right: 15px;
-    p{
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-    
-  .post span {
-    p:nth-child(1){
-      transition: 0.3s;
-      &:hover{
+      &:hover {
+        transition: 0.3s;
         color: $color1;
+        &::after {
+          z-index: -1;
+          transition: 0.6s;
+          top: -5px;
+          left: -5px;
+          transition: 0s;
+          transition-delay: 0.6s;
+        }
       }
     }
-  p:nth-child(2){
-    opacity: 0.7;
   }
-}
-  width: 280px;
-}
-.subscribe{
-  width: 300px;
-  form{
-    width: 275px;
-    padding: 5px;
-    background-color: white;
-    input{
-      border-style: none;
+  #navigation {
+    padding: 60px 0;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    .contact {
+      width: 25%;
     }
-    .main-button{
-      text-align: end;
-      padding-right: 10px;
-      width: 80px;
-      height: 30px;
-      font-size: 12px;
+    i {
+      margin-right: 10px;
+    }
+    a {
+      color: white;
+      transition: 0.3s;
+      &:hover {
+        color: $color1;
+        text-decoration: none;
+      }
+    }
+
+    .navigation-footer {
+      padding: 0 40px 0 20px;
+
+      ul {
+        padding: 0;
+        li {
+          transition: 0.3s;
+          list-style: none;
+          padding-bottom: 10px;
+          &:hover {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    h5 {
+      padding: 12px 0 19px 0;
+    }
+    .posts {
+      padding-right: 15px;
+      p {
+        line-height: 1.1;
+        margin-bottom: 10px;
+      }
+
+      .post span {
+        p:nth-child(1) {
+          transition: 0.3s;
+          &:hover {
+            color: $color1;
+          }
+        }
+        p:nth-child(2) {
+          opacity: 0.7;
+        }
+      }
+      width: 280px;
+    }
+    .subscribe {
+      width: 300px;
+      form {
+        width: 260px;
+        padding: 5px;
+        background-color: white;
+        input {
+          border-style: none;
+          width: 160px;
+        }
+        .main-button {
+          text-align: end;
+          padding-right: 10px;
+          width: 80px;
+          height: 30px;
+          font-size: 12px;
+        }
+      }
+      p {
+        font-size: 16px;
+        padding: 10px 0;
+        margin: 0;
+      }
+      i {
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.226);
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 5px;
+        margin: 3px;
+        transition: 0.3s;
+        &:hover {
+          color: $color1;
+        }
+      }
     }
   }
-  p{
-    font-size: 16px;
-    padding: 10px 0;
-    margin: 0;
-  }
-  i{
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.226);
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 5px;
-    margin: 3px;
-    transition: 0.3s;
-    &:hover{
-      color: $color1;
-    }
-  }
-}
-}
 }

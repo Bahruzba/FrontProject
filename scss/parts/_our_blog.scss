@@ -8,6 +8,7 @@
   }
   .items {
     .item {
+      margin-bottom: 40px;
       background-color: white;
       box-shadow: 0px 0px 10px 0px #bbbbbb;
       border-radius: 10px;
@@ -15,6 +16,7 @@
       .img{
         background-color: black;
         img{
+          width: 100%;
           transition: 0.3s;
         }
       }
