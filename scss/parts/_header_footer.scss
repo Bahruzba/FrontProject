@@ -151,7 +151,6 @@ header {
     .menues{
       transition: 0.3s;
       height: 0px;
-      overflow: hidden;
     }
     .home-link {
       padding-top: 20px;
@@ -275,7 +274,7 @@ footer {
   }
   #navigation {
     padding: 60px 0;
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(59, 59, 59);
     color: white;
     .contact {
       width: 25%;
@@ -364,6 +363,20 @@ footer {
         &:hover {
           color: $color1;
         }
+      }
+    }
+  }
+  #end{
+    background-color: rgb(34, 34, 34);
+    padding: 30px;
+    text-align: center;
+    color: white;
+    a{
+      color: white;
+      transition: 0.3s;
+      &:hover{
+        color: $color1;
+        text-decoration: none;
       }
     }
   }

@@ -1,100 +1,132 @@
-#our-courses{
-    margin: 100px 0;
-    .container{
-        justify-content: center;
+#our-courses {
+  margin: 100px 0;
+  .container {
+    justify-content: center;
+    .pages {
+      padding-top: 20px;
+      text-align: center;
+      span {
+        cursor: pointer;
+        padding: 8px 16px;
+        font-size: 20px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 2px solid rgb(173, 173, 173);
+        transition: 0.3s;
+        &:nth-child(2){
+            background-color: $color1;
+            color: white;
+            border-color: $color1
+        }
+        &:hover {
+          background-color: $color1;
+          color: white;
+          border-color: $color1
+        }
+        &:first-child {
+          padding: 8px 12px;
+          &:hover {
+            background-color: white;
+          }
+        }
+        &:last-child {
+          padding: 8px 12px;
+        }
+      }
     }
-    .item-cover{
-        margin-bottom: 30px;
+  }
+  .item-cover {
+    margin-bottom: 30px;
+  }
+  .item {
+    box-shadow: 0px 0px 10px 0px #bbbbbb;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .img {
+      overflow: hidden;
+      text-align: center;
     }
-    .item{
-        box-shadow: 0px 0px 10px 0px #bbbbbb;
-        border-radius: 10px;
-        overflow: hidden;
+    img {
+      width: 100%;
+      transition: 0.6s;
+    }
+    &:hover .img img {
+      transform: scale(1.1, 1.1);
+    }
+    .about-item {
+      padding: 5px 15px;
+      .title-item {
+        font-weight: bold;
+        transition: 0.3s;
+        &:hover {
+          color: $color1;
+        }
+      }
+      p {
+        font-size: 14px;
+        opacity: 0.7;
+      }
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        .left {
+          color: $color1;
+        }
+        .right {
+          font-size: 16px;
 
-        .img{
-            overflow: hidden;
-            text-align: center;
-        }
-        img{
-            width: 100%;
-            transition: 0.6s;
-
-        }
-        &:hover .img img{
-            transform: scale(1.1,1.1);
-        }
-        .about-item{
-            padding: 5px 15px;
-            .title-item{
-            font-weight: bold;
+          .far {
+            margin: 0 3px 0 10px;
+          }
+          .right1 {
             transition: 0.3s;
-            &:hover{
-                color: $color1;
+            &:hover {
+              color: $color1;
             }
+          }
+          .right2 {
+            transition: 0.3s;
+            &:hover {
+              color: $color1;
             }
-            p{
-                font-size: 14px;
-                opacity: 0.7;
-            }
-            .rating{
-                display: flex;
-                justify-content: space-between;
-                .left{
-                    color: $color1;
-                }
-                .right{
-                    font-size: 16px;
-                    
-                    .far{
-                        margin: 0 3px 0 10px;
-                    }
-                    .right1{
-                    transition: 0.3s;
-                    &:hover{
-                        color: $color1;
-                    }}
-                    .right2{
-                        transition: 0.3s;
-                        &:hover{
-                            color: $color1;
-                        }}
-                }
-
-            }
-
-            .person{
-                display: flex;
-                justify-content: space-between;
-                .person-profil{
-                    min-width: 170px;
-                }
-            }
-            img{
-                max-width: 60px;
-                border-radius: 50%;
-            }
-            .price{
-                border-radius: 5px;
-                margin: auto 0;
-                text-align: center;
-                line-height: 34px;
-                width: 60px;
-                height: 35px;
-                color: #0c5460;
-                background-color: #d1ecf1
-            }
-
-            .person{
-                transition: 0.3s;
-            &:hover{
-                text-decoration: none;
-                color: $color1;
-            }
+          }
         }
+      }
+
+      .person {
+        display: flex;
+        justify-content: space-between;
+        .person-profil {
+          min-width: 170px;
         }
-}
-.main-button{
+      }
+      img {
+        max-width: 60px;
+        border-radius: 50%;
+      }
+      .price {
+        border-radius: 5px;
+        margin: auto 0;
+        text-align: center;
+        line-height: 34px;
+        width: 60px;
+        height: 35px;
+        color: #0c5460;
+        background-color: #d1ecf1;
+      }
+
+      .person {
+        transition: 0.3s;
+        &:hover {
+          text-decoration: none;
+          color: $color1;
+        }
+      }
+    }
+  }
+  .main-button {
     left: 50%;
     margin-left: -85px;
-}
+  }
 }

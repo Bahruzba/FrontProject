@@ -177,7 +177,6 @@ header .navigation .menues {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   height: 0px;
-  overflow: hidden;
 }
 
 header .navigation .home-link {
@@ -325,7 +324,7 @@ footer #training .right:hover::after {
 
 footer #navigation {
   padding: 60px 0;
-  background-color: #272727;
+  background-color: #3b3b3b;
   color: white;
 }
 
@@ -436,6 +435,24 @@ footer #navigation .subscribe i {
 
 footer #navigation .subscribe i:hover {
   color: #FFBC09;
+}
+
+footer #end {
+  background-color: #222222;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+footer #end a {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer #end a:hover {
+  color: #FFBC09;
+  text-decoration: none;
 }
 
 .bottom {
@@ -945,6 +962,46 @@ footer #navigation .subscribe i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#our-courses .container .pages {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#our-courses .container .pages span {
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 20px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #adadad;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#our-courses .container .pages span:nth-child(2) {
+  background-color: #FFBC09;
+  color: white;
+  border-color: #FFBC09;
+}
+
+#our-courses .container .pages span:hover {
+  background-color: #FFBC09;
+  color: white;
+  border-color: #FFBC09;
+}
+
+#our-courses .container .pages span:first-child {
+  padding: 8px 12px;
+}
+
+#our-courses .container .pages span:first-child:hover {
+  background-color: white;
+}
+
+#our-courses .container .pages span:last-child {
+  padding: 8px 12px;
 }
 
 #our-courses .item-cover {
