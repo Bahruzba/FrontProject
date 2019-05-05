@@ -57,6 +57,9 @@
   .navigation {
     width: 950px !important;
   }
+  .navigation>.row{
+    padding-left: 40px;
+    padding-right: 40px;  }
   .fixed {
     width: 100% !important;
   }
@@ -87,6 +90,19 @@
   }
   #tab-menu textarea {
     width: 650px !important;
+  }
+  .timer .to-end span{
+    padding: 5px!important;
+    font-size: 18px;
+  }
+  .timer .time-name span{
+  padding: 6px;
+  font-size: 14px;
+  }
+
+  .timer .right{
+    left: 50%!important;
+    margin-left: -60px;
   }
 }
 
@@ -211,6 +227,22 @@
   #tab-menu .rating .gray {
     width: 55% !important;
   }
+
+  .timer .to-end span{
+    padding: 15px!important;
+    font-size: 35px;
+  }
+  .timer .time-name span{
+  padding: 36px;
+  font-size: 16px;
+  }
+
+  .timer .right{
+    left: 50%!important;
+    margin-left: -60px;
+  }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -354,6 +386,25 @@
     top: 10px !important;
     left: -10px !important;
   }
+
+  #stydent-say {
+    margin: 20px;
+  }
+  #stydent-say .item {
+    padding: 25px 20px !important;
+    margin: 50px 10px !important;
+  }
+  #stydent-say .item i {
+    margin-left: 50px;
+  }
+  #stydent-say .item img {
+    width: 70px!important;
+  }
+  #stydent-say .item .img {
+    top: 10px !important;
+    left: -10px !important;
+  }
+
   #tab-menu .body-tab-menu [review] .teacher-say img {
     width: 70px!important;
   }
@@ -369,6 +420,20 @@
     border-style: none!important;
     margin: 10px;
   }
+  .timer .to-end span{
+    padding: 9px!important;
+    font-size: 25px;
+  }
+  .timer .time-name span{
+  padding: 18px;
+  font-size: 14px;
+  }
+
+  .timer .right{
+    left: 50%!important;
+    margin-left: -60px;
+  }
+
 
 }
 @media screen and (max-width: 430px) {

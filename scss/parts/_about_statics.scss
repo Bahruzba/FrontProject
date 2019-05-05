@@ -1,7 +1,23 @@
-#statics {
-    background-color: rgb(248, 248, 248);
-    background-image: none;
-.item{
+#about-statics {
+  background-color: rgb(248, 248, 248);
+  .item {
+    padding: 70px 50px;
+    color: white;
+    text-align: center;
+    p {
+      font-size: 30px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+  .statics {
+    background-color: rgba(0, 31, 63, 0.651);
+  }
+
+  .item {
     color: black;
-}
+  }
 }

@@ -1,0 +1,28 @@
+.timer {
+  background-color: $color1;
+  padding: 10px 10px 80px 10px;
+  color: white;
+  .to-end {
+    text-align: center;
+    span {
+        font-size: 28px;
+      padding: 0 6px;
+      font-weight: 700;
+    }
+  }
+  .time-name {
+    text-align: center;
+    span {
+      padding: 16px;
+      font-size: 12px;
+    }
+  }
+
+}
+
+.timer .right{
+  width: 120px;
+  padding: 5px!important;
+  left: 80px;
+  top: 100px;
+}

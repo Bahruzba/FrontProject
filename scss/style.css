@@ -172,6 +172,10 @@ header .navigation {
   height: 80px;
 }
 
+header .navigation > .row {
+  width: 1100px;
+}
+
 header .navigation .menues {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -263,68 +267,6 @@ footer #training {
   background-color: #FFBC09;
   color: white;
   padding: 40px;
-}
-
-footer #training .right {
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-  background-color: transparent;
-  border-style: solid;
-  padding: 12px 28px;
-  position: absolute;
-  right: 230px;
-  color: white;
-  overflow: hidden;
-  z-index: 2;
-}
-
-footer #training .right::before {
-  content: "";
-  width: 160px !important;
-  height: 55px !important;
-  position: absolute;
-  background-color: white;
-  top: -5px;
-  left: -200px;
-  z-index: 9;
-}
-
-footer #training .right:hover::before {
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-  top: -5px;
-  left: -5px;
-  z-index: -1;
-}
-
-footer #training .right::after {
-  content: "";
-  width: 160px;
-  height: 55px;
-  position: absolute;
-  background-color: white;
-  top: -5px;
-  left: 170px;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-footer #training .right:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: #FFBC09;
-}
-
-footer #training .right:hover::after {
-  z-index: -1;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  top: -5px;
-  left: -5px;
-  -webkit-transition: 0s;
-  transition: 0s;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
 }
 
 footer #navigation {
@@ -458,6 +400,72 @@ footer #end a {
 footer #end a:hover {
   color: #FFBC09;
   text-decoration: none;
+}
+
+button.right {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  background-color: transparent;
+  border-style: solid;
+  padding: 12px 28px;
+  position: absolute;
+  right: 230px;
+  color: white;
+  overflow: hidden;
+  z-index: 2;
+}
+
+button.right::before {
+  content: "";
+  width: 160px !important;
+  height: 55px !important;
+  position: absolute;
+  background-color: white;
+  top: -5px;
+  left: -200px;
+  z-index: 9;
+}
+
+button.right:hover::before {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  top: -5px;
+  left: -5px;
+  z-index: -1;
+}
+
+button.right::after {
+  content: "";
+  width: 160px;
+  height: 55px;
+  position: absolute;
+  background-color: white;
+  top: -5px;
+  left: 170px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+button.right:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #FFBC09;
+}
+
+button.right:hover::after {
+  z-index: -1;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  top: -5px;
+  left: -5px;
+  -webkit-transition: 0s;
+  transition: 0s;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.icon-ylw::before {
+  color: #FFBC09;
 }
 
 .bottom {
@@ -609,7 +617,6 @@ footer #end a:hover {
 }
 
 #slider .right {
-  width: 151px;
   right: 30px;
   padding-left: 21px;
 }
@@ -1878,12 +1885,31 @@ footer #end a:hover {
   line-height: 50px;
 }
 
-#statics {
+#about-statics {
   background-color: #f8f8f8;
-  background-image: none;
 }
 
-#statics .item {
+#about-statics .item {
+  padding: 70px 50px;
+  color: white;
+  text-align: center;
+}
+
+#about-statics .item p {
+  font-size: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#about-statics .item span {
+  font-size: 18px;
+}
+
+#about-statics .statics {
+  background-color: rgba(0, 31, 63, 0.651);
+}
+
+#about-statics .item {
   color: black;
 }
 
@@ -2475,5 +2501,175 @@ main > .container #teachers-page .teachers-static .teachers-info .review i {
 
 #contact-information .item p {
   margin: 0;
+}
+
+#news .time {
+  text-align: center;
+  width: 80px;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  color: black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#news .time .up {
+  padding: 5px;
+  background-color: white;
+  font-weight: bold;
+}
+
+#news .time .up :first-child {
+  font-size: 25px;
+}
+
+#news .time .down {
+  padding: 5px;
+  background-color: #FFBC09;
+  color: white;
+  font-weight: 500;
+}
+
+#news .time p {
+  margin: 0;
+}
+
+#news img {
+  width: 100%;
+}
+
+#news .news {
+  position: relative;
+}
+
+#news .news h4 {
+  padding-top: 10px;
+}
+
+#news .news .left {
+  color: #FFBC09;
+}
+
+#news .news .left i {
+  color: rgba(0, 0, 0, 0.623);
+}
+
+#news .news .right {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+}
+
+#news .news .right i {
+  font-size: 18px;
+  padding: 8px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#news .news .right i:hover {
+  color: #FFBC09;
+}
+
+#news .news .comment {
+  margin: 40px 0;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 20px 0px #c9c9c9;
+          box-shadow: 0px 0px 20px 0px #c9c9c9;
+}
+
+#news .news .comment input {
+  padding: 15px 20px;
+  width: 47%;
+  margin-top: 10px;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+}
+
+#news .news .comment input::-webkit-input-placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment input:-ms-input-placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment input::-ms-input-placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment input::placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment textarea {
+  padding: 15px 20px;
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+}
+
+#news .news .comment textarea::-webkit-input-placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment textarea:-ms-input-placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment textarea::-ms-input-placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment textarea::placeholder {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+#news .news .comment button {
+  width: 120px;
+}
+
+.timer {
+  background-color: #FFBC09;
+  padding: 10px 10px 80px 10px;
+  color: white;
+}
+
+.timer .to-end {
+  text-align: center;
+}
+
+.timer .to-end span {
+  font-size: 28px;
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+.timer .time-name {
+  text-align: center;
+}
+
+.timer .time-name span {
+  padding: 16px;
+  font-size: 12px;
+}
+
+.timer .right {
+  width: 120px;
+  padding: 5px !important;
+  left: 80px;
+  top: 100px;
 }
 /*# sourceMappingURL=style.css.map */

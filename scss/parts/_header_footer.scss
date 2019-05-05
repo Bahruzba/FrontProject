@@ -4,9 +4,7 @@
   top: 0;
   background-color: white;
   z-index: 3;
-  // .row{
-  //   width: 900px!important;
-  // }
+
 }
 
 .main-button {
@@ -149,10 +147,14 @@ header {
     margin: 0 auto;
     width: 1100px;
     height: 80px;
+    &>.row{
+      width: 1100px;
+    }
 
     .menues{
       transition: 0.3s;
       height: 0px;
+
     }
     .home-link {
       padding-top: 20px;
@@ -228,55 +230,7 @@ footer {
     background-color: $color1;
     color: white;
     padding: 40px;
-    .right {
-      transition: all 0.6s;
-      background-color: transparent;
-      border-style: solid;
-      padding: 12px 28px;
-      position: absolute;
-      right: 230px;
-      color: white;
-      overflow: hidden;
-      z-index: 2;
-      &::before {
-        content: "";
-        width: 160px !important;
-        height: 55px !important;
-        position: absolute;
-        background-color: white;
-        top: -5px;
-        left: -200px;
-        z-index: 9;
-      }
-      &:hover::before {
-        transition: all 0.6s;
-        top: -5px;
-        left: -5px;
-        z-index: -1;
-      }
-      &::after {
-        content: "";
-        width: 160px;
-        height: 55px;
-        position: absolute;
-        background-color: white;
-        top: -5px;
-        left: 170px;
-        transition: all 0.6s;
-      }
-      &:hover {
-        transition: 0.3s;
-        color: $color1;
-        &::after {
-          z-index: -1;
-          transition: 0.6s;
-          top: -5px;
-          left: -5px;
-          transition: 0s;
-          transition-delay: 0.6s;
-        }
-      }
-    }
+
   }
   #navigation {
     padding: 60px 0;
@@ -386,4 +340,57 @@ footer {
       }
     }
   }
+}
+
+button.right {
+  transition: all 0.6s;
+  background-color: transparent;
+  border-style: solid;
+  padding: 12px 28px;
+  position: absolute;
+  right: 230px;
+  color: white;
+  overflow: hidden;
+  z-index: 2;
+  &::before {
+    content: "";
+    width: 160px !important;
+    height: 55px !important;
+    position: absolute;
+    background-color: white;
+    top: -5px;
+    left: -200px;
+    z-index: 9;
+  }
+  &:hover::before {
+    transition: all 0.6s;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    width: 160px;
+    height: 55px;
+    position: absolute;
+    background-color: white;
+    top: -5px;
+    left: 170px;
+    transition: all 0.6s;
+  }
+  &:hover {
+    transition: 0.3s;
+    color: $color1;
+    &::after {
+      z-index: -1;
+      transition: 0.6s;
+      top: -5px;
+      left: -5px;
+      transition: 0s;
+      transition-delay: 0.6s;
+    }
+  }
+}
+.icon-ylw::before{
+  color: $color1;
 }

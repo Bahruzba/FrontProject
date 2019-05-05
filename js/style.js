@@ -11,14 +11,14 @@ $(document).ready(function () {
     })
 
     $("#header .menu span").click(function () {
-        if($(this).parent().children("ul").hasClass("d-block")==true){
+        if ($(this).parent().children("ul").hasClass("d-block") == true) {
             $(this).parent().children("ul").removeClass("d-block");
             return;
         };
         $("#header .menu").children(".d-block").removeClass("d-block");
         $(this).parent().children("ul").toggleClass("d-block");
     })
-    $("#header .menu ul li").click(function(){
+    $("#header .menu ul li").click(function () {
         $(this).children("ul").toggleClass("d-block");
         $("this").parent().addClass("d-none");
 
@@ -101,8 +101,8 @@ $(document).ready(function () {
 
     // Number courses
     var i = 0, free, paid;
-    if($("#about-us").length==1){
-    var aboutUs = $("#about-us").position().top;
+    if ($("#about-us").length == 1) {
+        var aboutUs = $("#about-us").position().top;
     }
     $(window).scroll(function (e) {
         if ($("html").scrollTop() > aboutUs - 460) {
@@ -189,24 +189,25 @@ $(document).ready(function () {
 
     // number section statics
     var students, courses, teachers, award, j = 0;
-    if($("#statics").length==1){
-    var statics = $("#statics").position().top;
-    }
+    if ($("#statics").length == 1) {
+        var statics = $("#statics").position().top;
+    };
+
     $(window).scroll(function (e) {
-        if ($("html").scrollTop() > statics - 580) {
+        if ($("html").scrollTop() > statics - 660) {
             if (j == 0) {
                 students = setInterval(function () {
-                    if (j > 1798) {
+                    if (j > 1800) {
                         clearInterval(students);
                         $("#statics .students").text("1800+");
                     } else {
                         j = j + 2;
                         $("#statics .students").text(j + "+");
                     }
-                }, 3);
+                }, 5);
 
                 courses = setInterval(function () {
-                    if (j > 1749) {
+                    if (j > 1760) {
                         clearInterval(courses);
                         $("#statics .courses").text("70");
                     } else {
@@ -226,12 +227,61 @@ $(document).ready(function () {
                 }, 8);
 
                 award = setInterval(function () {
-                    if (j > 1798) {
+                    if (j > 1800) {
                         clearInterval(award);
                         $("#statics .award").text("1200+");
                     } else {
                         j = j + 2;
                         $("#statics .award").text(Math.round(j / 1.5) + "+");
+                    }
+                }, 8);
+            }
+        }
+    })
+
+    if ($("#about-statics").length == 1) {
+        var statics = $("#about-statics").position().top;
+    };
+    $(window).scroll(function (e) {
+        if ($("html").scrollTop() > statics - 660) {
+            if (j == 0) {
+                students = setInterval(function () {
+                    if (j > 1798) {
+                        clearInterval(students);
+                        $("#about-statics .students").text("1800+");
+                    } else {
+                        j = j + 2;
+                        $("#about-statics .students").text(j + "+");
+                    }
+                }, 3);
+
+                courses = setInterval(function () {
+                    if (j > 1749) {
+                        clearInterval(courses);
+                        $("#about-statics .courses").text("70");
+                    } else {
+                        j = j + 1;
+                        $("#about-statics .courses").text(Math.round(j / 26));
+                    }
+                }, 8);
+
+                teachers = setInterval(function () {
+                    if (j > 1800) {
+                        clearInterval(teachers);
+                        $("#about-statics .teachers").text("700+");
+                    } else {
+                        j = j + 1;
+                        $("#about-statics .teachers").text(Math.round(j / 2.6) + "+");
+                    }
+                }, 8);
+
+                award = setInterval(function () {
+                    if (j > 1798) {
+                        clearInterval(award);
+                        $("#about-statics .award").text("1200+");
+                    } else {
+                        j = j + 2;
+                        $("#about-statics .award").text(Math.round(j / 1.5) + "+");
                     }
                 }, 8);
             }
@@ -246,7 +296,6 @@ $(document).ready(function () {
             var a = $("[" + $(this).attr("item") + "]");
             $("#our-gallery .items-name .active").removeClass("active");
             $(this).addClass("active");
-
 
             $("#our-gallery .item").parent().addClass("dis").removeClass("col-4");
             $("[" + $(this).attr("item") + "]").removeClass("dis").addClass("col-4");
@@ -278,9 +327,6 @@ $(document).ready(function () {
                     slidesToShow: 1,
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -298,29 +344,65 @@ $(document).ready(function () {
 
 
     // main tab-menu in course detail page
-    $("#tab-menu .header-tab-menu div").click(function(){
+    $("#tab-menu .header-tab-menu div").click(function () {
         $("#tab-menu .header-tab-menu [show-tab]").removeAttr("show-tab");
         $(this).attr("show-tab", "");
         $(this).attr("name")
         $("#tab-menu .body-tab-menu [show-tab]").removeAttr("show-tab");
         $("#tab-menu .body-tab-menu [" + $(this).attr("name") + "]").attr("show-tab", "");
-        
+
     })
 
     // mini tab-menu in main tab menu in course detail  page
-    $("#tab-menu .body-tab-menu [curriculum] h5").click(function(){
-        if($(this).parent().css("height")=="161px"){
-            $(this).parent().animate({height: "62px"});
+    $("#tab-menu .body-tab-menu [curriculum] h5").click(function () {
+        if ($(this).parent().css("height") == "161px") {
+            $(this).parent().animate({ height: "62px" });
             return;
         }
-        $(this).parent().siblings().animate({height: "62px"});
-        $(this).parent().animate({height: "161px"});
-    }) 
+        $(this).parent().siblings().animate({ height: "62px" });
+        $(this).parent().animate({ height: "161px" });
+    })
 
-    $("#tab-menu .body-tab-menu .add-review .fa-star").click(function(){
+    $("#tab-menu .body-tab-menu .add-review .fa-star").click(function () {
         $(this).addClass("fas");
         $(this).siblings().addClass("fas");
         $(this).nextAll().removeClass("fas").addClass("far");
-        // $(this).
     })
+
+    var endTime = 1564858850465;
+    function timer() {
+        var difference, day, hours, minute, second, time;
+        setInterval(function () {
+            time = new Date;
+            difference = endTime - time.getTime();
+            day = Math.floor(difference / 1000 / 60 / 60 / 24);
+            hours = Math.floor(difference / 1000 / 60 / 60) % 24;
+            minute = Math.floor(difference / 1000 / 60) % (60);
+            second = Math.floor(difference / 1000) % (60);
+        }, 1000);
+
+
+        $(".timer").prepend("<div class='to-end'></div>");
+        $(".timer .to-end").append("<span class='day'>" + 0 + "</span>");
+        $(".timer .to-end").append("<span>:</span>");
+        $(".timer .to-end").append("<span class='hours'>" + 0 + "</span>");
+        $(".timer .to-end").append("<span>:</span>");
+        $(".timer .to-end").append("<span class='minute'>" + 0 + "</span>");
+        $(".timer .to-end").append("<span>:</span>");
+        $(".timer .to-end").append("<span class='second'>" + 0 + "</span>");
+
+        setInterval(function () {
+            $(".timer .to-end .day").text(day)
+            $(".timer .to-end .hours").text(hours)
+            $(".timer .to-end .minute").text(minute)
+            $(".timer .to-end .second").text(second);
+
+        }, 1000);
+
+
+        // console.log(difference, day, hours, minute, second);
+        console.log($(".timer .time-name"));
+    }
+
+    timer();
 })
