@@ -6,10 +6,6 @@
   z-index: 3;
 }
 
-.fixed .row {
-  width: 1100px !important;
-}
-
 .main-button {
   position: relative;
   width: 180px;
@@ -2400,5 +2396,84 @@ main > .container #teachers-page .teachers-static .teachers-info .review i {
   color: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+#get-in-touch {
+  margin: 80px 0;
+}
+
+#get-in-touch .register {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px 0px #c9c9c9;
+          box-shadow: 0px 0px 20px 0px #c9c9c9;
+}
+
+#get-in-touch .register .register1 {
+  padding: 40px 20px 40px 30px;
+}
+
+#get-in-touch .register .register1 input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+#get-in-touch .register .register1 input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+#get-in-touch .register .register1 input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+#get-in-touch .register .register1 input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+#get-in-touch .register .register1 input::placeholder {
+  opacity: 1;
+}
+
+#get-in-touch .register .register1 textarea {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #c2c2c2;
+  border-radius: 5px;
+}
+
+#get-in-touch .register .register1 button {
+  width: 120px;
+}
+
+#get-in-touch .register .map {
+  overflow: hidden;
+}
+
+#contact-information {
+  margin-bottom: 80px;
+}
+
+#contact-information .item-cover {
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+#contact-information .item {
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  padding: 30px 10px;
+  color: white;
+}
+
+#contact-information .item h4 {
+  padding: 10px;
+}
+
+#contact-information .item p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

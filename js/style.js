@@ -11,7 +11,6 @@ $(document).ready(function () {
     })
 
     $("#header .menu span").click(function () {
-    
         if($(this).parent().children("ul").hasClass("d-block")==true){
             $(this).parent().children("ul").removeClass("d-block");
             return;
@@ -20,7 +19,6 @@ $(document).ready(function () {
         $(this).parent().children("ul").toggleClass("d-block");
     })
     $("#header .menu ul li").click(function(){
-        console.log("yeeee");
         $(this).children("ul").toggleClass("d-block");
         $("this").parent().addClass("d-none");
 
@@ -253,7 +251,6 @@ $(document).ready(function () {
             $("#our-gallery .item").parent().addClass("dis").removeClass("col-4");
             $("[" + $(this).attr("item") + "]").removeClass("dis").addClass("col-4");
         }
-
     })
 
 
