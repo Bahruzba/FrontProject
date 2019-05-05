@@ -1,0 +1,226 @@
+#tab-menu {
+  margin-top: 30px;
+  .header-tab-menu {
+    border-bottom: 0.5px solid rgb(221, 221, 221);
+    text-align: center;
+    .head-menu {
+      transition: 0.2s;
+      cursor: pointer;
+      width: 100px;
+      margin-right: 20px;
+      padding: 10px;
+      border-bottom: 0.5px solid rgb(221, 221, 221);
+
+      &:hover{
+        color: $color1;
+      }
+    }
+    [show-tab] {
+      border-bottom: 4px solid white;
+      border-color: $color1;
+      color: $color1;
+    }
+  }
+  .body-tab-menu {
+    margin-top: 20px;
+    [overview] {
+      display: none;
+      border-radius: 10px;
+      border: 0.5px solid rgb(212, 212, 212);
+      padding: 20px;
+      p {
+        margin: 0;
+        opacity: 0.7;
+      }
+    }
+    [curriculum] {
+      display: none;
+      border: 0.5px solid rgb(212, 212, 212);
+      div{
+      height: 62px;
+      overflow: hidden;
+      }
+      h5 {
+        cursor: pointer;
+        font-weight: 700;
+        border: 0.5px solid rgb(212, 212, 212);
+        padding: 20px;
+        transition: 0.3s;
+        &:hover{
+          color: $color1;
+        }
+      }
+      .sag {
+        background-color: $color1;
+        color: white;
+        border-radius: 4px;
+        padding: 3px 10px 5px;
+        font-size: 14px;
+        position: absolute;
+        right: 50px;
+      }
+      p {
+        padding: 8px 20px 15px;
+        opacity: 0.7;
+        border-bottom: 0.5px solid rgb(212, 212, 212);
+        margin: 0;
+      }
+    }
+    [instructor]{
+      display: none;
+    }
+    .item {
+      border-radius: 10px;
+      padding: 25px 50px 25px 70px;
+      box-shadow: 0px 0px 10px 0px #bbbbbb;
+      margin: 50px;
+      position: relative;
+      h1 {
+        font-weight: 700;
+      }
+      i {
+        color: $color1;
+      }
+      p {
+        opacity: 0.7;
+        margin-top: 10px;
+      }
+      .img {
+        position: absolute;
+        top: 30px;
+        left: -50px;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    [review] {
+      display: none;
+        padding: 20px 15px;
+        border: 0.5px solid rgb(212, 212, 212);
+        border-radius: 5px;
+      .rating {
+        .left {
+          text-align: center;
+          vertical-align: middle;
+          background-color: rgb(245, 245, 245);
+          padding: 20px 0;
+          h1 {
+            font-size: 70px;
+          }
+          p {
+            opacity: 0.8;
+          }
+          span {
+            color: $color1;
+          }
+          i {
+            font-size: 14px;
+            margin: 3px;
+          }
+        }
+        .right {
+          .stars {
+            width: 100%;
+            margin: 15px;
+            .gray {
+              margin: 0 15px;
+              height: 16px;
+              background-color: #e2e2e2;
+              width: 70%;
+              overflow: hidden;
+              margin-top: 4px;
+              .ninety {
+                background-color: $color1;
+                width: 90%;
+                height: 18px;
+              }
+              .seventy {
+                background-color: $color1;
+                width: 70%;
+                height: 18px;
+              }
+              .fourty {
+                background-color: $color1;
+                width: 40%;
+                height: 18px;
+              }
+              .twenty {
+                background-color: $color1;
+                width: 20%;
+                height: 18px;
+              }
+              .ten {
+                background-color: $color1;
+                width: 10%;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+      .teacher-say{
+        position: relative;
+        display: flex;
+        img{
+          border-radius: 5px;
+        }
+        .info{
+          margin-left: 15px;
+          a{
+            color: black;
+            transform: 0.3s;
+            font-size: 16px;
+            font-weight: bold;
+            &:hover{
+              color: $color1;
+              text-decoration: none;
+            }
+          }
+          p{
+            margin: 3px 0 0 0;
+          }
+          span{
+            color: $color1;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            font-size: 12px;
+            i{
+              margin: 2px;
+            }
+          }
+        }
+      }
+      .add-review{
+        i{
+          font-size: 20px;
+          color: $color1;
+        }
+        textarea{
+          padding: 15px;
+          border: 1px solid #bbbbbb;
+          border-radius: 5px;
+          &::placeholder{
+            opacity: 1;
+          }
+        }
+        input{
+          border: 1px solid #bbbbbb;
+          border-radius: 5px;
+          width: 47%;
+          margin: 20px 0;
+          padding: 10px;
+          &::placeholder{
+            opacity: 1;
+          }
+        }
+      }
+    }
+    [show-tab]{
+      display: block;
+    }
+  }
+}

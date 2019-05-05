@@ -1,10 +1,12 @@
 .fixed {
   position: fixed!important;
-  margin: 0;
   width: 100%!important;
   top: 0;
   background-color: white;
   z-index: 3;
+  .row{
+    width: 1100px!important;
+  }
 }
 
 .main-button {
@@ -145,7 +147,7 @@ header {
 
   .navigation {
     margin: 0 auto;
-    width: 1200px;
+    width: 1100px;
     height: 80px;
 
     .menues{
@@ -169,6 +171,10 @@ header {
       transition: 0.3s;
       cursor: pointer;
       position: relative;
+      h6{
+        width: 100%;
+        text-align: justify;
+      }
       &:hover{
         color: $color1;
       }

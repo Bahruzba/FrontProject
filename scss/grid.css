@@ -76,6 +76,9 @@
     width: 50% !important;
     padding: 0 20px 40px !important;
   }
+  .teachers-static .piece, button{
+    top: 390px!important;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -217,6 +220,9 @@
   }
   #our-blog .about-share a {
     margin-right: 20px !important;
+  }
+  .teachers-static .piece, button{
+    top: 270px!important;
   }
 }
 

@@ -1,39 +1,7 @@
-#our-courses {
+#related-courses, #our-courses {
   margin: 100px 0;
   .container {
     justify-content: center;
-    .pages {
-      padding-top: 20px;
-      text-align: center;
-      span {
-        cursor: pointer;
-        padding: 8px 16px;
-        font-size: 20px;
-        margin: 5px;
-        border-radius: 5px;
-        border: 2px solid rgb(173, 173, 173);
-        transition: 0.3s;
-        &:nth-child(2){
-            background-color: $color1;
-            color: white;
-            border-color: $color1
-        }
-        &:hover {
-          background-color: $color1;
-          color: white;
-          border-color: $color1
-        }
-        &:first-child {
-          padding: 8px 12px;
-          &:hover {
-            background-color: white;
-          }
-        }
-        &:last-child {
-          padding: 8px 12px;
-        }
-      }
-    }
   }
   .item-cover {
     margin-bottom: 30px;
@@ -130,3 +98,41 @@
     margin-left: -85px;
   }
 }
+.pages {
+    padding-top: 20px;
+    text-align: center;
+    span {
+      cursor: pointer;
+      padding: 8px 16px;
+      font-size: 20px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 2px solid rgb(173, 173, 173);
+      transition: 0.3s;
+      &:nth-child(2){
+          background-color: $color1;
+          color: white;
+          border-color: $color1
+      }
+      &:hover {
+        background-color: $color1;
+        color: white;
+        border-color: $color1
+      }
+      &:first-child {
+        padding: 8px 12px;
+        &:hover {
+          background-color: white;
+          color: black;
+          border-color: rgb(173, 173, 173);
+        }
+      }
+      &:last-child {
+        padding: 8px 12px;
+      }
+    }
+  }
+
+  #related-courses{
+    margin-top: 50px;
+  }

@@ -1,0 +1,71 @@
+main > .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  #teachers-page {
+          img{
+              width: 100%;
+          }
+    .teachers-static {
+        padding: 25px;
+      background-color: #fff3cd;
+      width: 100%;
+      button{
+          width: 100px;
+          height: 35px;
+          font-weight: 400;
+          position: absolute;
+          top: 480px;
+          right: 40px;
+      }
+      .piece{
+        width: 120px;
+        height: 35px;
+        position: absolute;
+        top: 480px;
+        left: 40px;
+        background-color: #d4edda;
+        font-size: 16px;
+        line-height: 35px;
+        text-align: center;
+        border-radius: 5px;
+      }
+      .teachers-info {
+          a{
+              color: black;
+              transition: 0.3s;
+              &:hover{
+                  color: $color1;
+                  text-decoration: none;
+              }
+          }
+        .teach {
+          width: 180px;
+          img{
+              border-radius: 8px;
+          }
+          .name{
+              padding: 5px;
+          }
+        }
+        .categories{
+            padding: 5px 15px;
+            border-left: 1px solid;
+            width: 200px;
+        }
+        .students{
+            padding: 5px 15px;
+            border-left: 1px solid;
+            width: 150px;
+        }
+        .review{
+            padding: 5px 15px;
+            border-left: 1px solid;
+            width: 150px;
+            i{
+                color: $color1;
+            }
+        }
+      }
+    }
+  }
+}

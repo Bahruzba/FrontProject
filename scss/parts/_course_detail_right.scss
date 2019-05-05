@@ -1,0 +1,113 @@
+.course-detail-right {
+  .letets-course, .course-categories, .recent-post, .tags{
+    position: relative;
+    margin: 20px 0;
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 30px;
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+    i {
+      font-size: 20px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    h4::before {
+      content: "";
+      background-color: $color1;
+      width: 120px;
+      height: 3px;
+      position: absolute;
+      bottom: 0px;
+      right: 135px;
+    }
+    a {
+      color: black;
+      font-size: 14px;
+      transition: 0.3s;
+      &:hover {
+        color: $color1;
+        text-decoration: none;
+      }
+    }
+    .count {
+      position: absolute;
+      right: 10px;
+    }
+  }
+  .item {
+    display: flex;
+    margin-top: 10px;
+    a {
+      color: black;
+      font-size: 14px;
+      transition: 0.3s;
+      &:hover {
+        color: $color1;
+        text-decoration: none;
+      }
+    }
+    p {
+      opacity: 0.7;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  .course-categories {
+
+    h4::before {
+      top: 40px;
+    }
+    .categorie {
+      padding: 5px;
+      transition: 0.3s;
+      &:hover {
+        color: $color1;
+        text-decoration: none;
+      }
+      a,
+      .count {
+        font-size: 18px;
+      }
+    }
+  }
+  .recent-post{
+      h4::before{
+        top: 40px;
+      }
+  }
+  .box{
+      padding: 7px 11px;
+      margin: 3px;
+      border: 0.5px solid rgb(179, 179, 179);
+      transition: 0.3s;
+      &:hover{
+          background-color: $color1;
+          a{
+              color: white;
+          }
+      }
+      a{
+          color: black;
+          transition: 0.3s;
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

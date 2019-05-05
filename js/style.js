@@ -11,7 +11,6 @@ $(document).ready(function () {
     })
 
     $("#header .menu span").click(function () {
-        console.log("vurduuuuuuuuu");
     
         if($(this).parent().children("ul").hasClass("d-block")==true){
             $(this).parent().children("ul").removeClass("d-block");
@@ -104,7 +103,9 @@ $(document).ready(function () {
 
     // Number courses
     var i = 0, free, paid;
+    if($("#about-us").length==1){
     var aboutUs = $("#about-us").position().top;
+    }
     $(window).scroll(function (e) {
         if ($("html").scrollTop() > aboutUs - 460) {
             if (i == 0) {
@@ -190,7 +191,9 @@ $(document).ready(function () {
 
     // number section statics
     var students, courses, teachers, award, j = 0;
+    if($("#statics").length==1){
     var statics = $("#statics").position().top;
+    }
     $(window).scroll(function (e) {
         if ($("html").scrollTop() > statics - 580) {
             if (j == 0) {
@@ -296,4 +299,31 @@ $(document).ready(function () {
         infinite: true,
     });
 
+
+    // main tab-menu in course detail page
+    $("#tab-menu .header-tab-menu div").click(function(){
+        $("#tab-menu .header-tab-menu [show-tab]").removeAttr("show-tab");
+        $(this).attr("show-tab", "");
+        $(this).attr("name")
+        $("#tab-menu .body-tab-menu [show-tab]").removeAttr("show-tab");
+        $("#tab-menu .body-tab-menu [" + $(this).attr("name") + "]").attr("show-tab", "");
+        
+    })
+
+    // mini tab-menu in main tab menu in course detail  page
+    $("#tab-menu .body-tab-menu [curriculum] h5").click(function(){
+        if($(this).parent().css("height")=="161px"){
+            $(this).parent().animate({height: "62px"});
+            return;
+        }
+        $(this).parent().siblings().animate({height: "62px"});
+        $(this).parent().animate({height: "161px"});
+    }) 
+
+    $("#tab-menu .body-tab-menu .add-review .fa-star").click(function(){
+        $(this).addClass("fas");
+        $(this).siblings().addClass("fas");
+        $(this).nextAll().removeClass("fas").addClass("far");
+        // $(this).
+    })
 })
