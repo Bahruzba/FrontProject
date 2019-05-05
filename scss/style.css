@@ -1952,19 +1952,19 @@ main > .container #teachers-page .teachers-static .teachers-info .teach .name {
 }
 
 main > .container #teachers-page .teachers-static .teachers-info .categories {
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-left: 1px solid;
-  width: 200px;
+  width: 180px;
 }
 
 main > .container #teachers-page .teachers-static .teachers-info .students {
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-left: 1px solid;
   width: 150px;
 }
 
 main > .container #teachers-page .teachers-static .teachers-info .review {
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-left: 1px solid;
   width: 150px;
 }
@@ -2206,7 +2206,7 @@ main > .container #teachers-page .teachers-static .teachers-info .review i {
 #tab-menu .body-tab-menu [review] .teacher-say .info span {
   color: #FFBC09;
   position: absolute;
-  top: 10px;
+  top: 3px;
   right: 0px;
   font-size: 12px;
 }

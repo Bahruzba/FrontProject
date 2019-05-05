@@ -76,8 +76,17 @@
     width: 50% !important;
     padding: 0 20px 40px !important;
   }
-  .teachers-static .piece, button{
-    top: 390px!important;
+  .teachers-static .piece {
+    top: 390px !important;
+  }
+  .teachers-static button {
+    top: 390px !important;
+  }
+  .course-detail-right h4::before {
+    right: 90px !important;
+  }
+  #tab-menu textarea {
+    width: 650px !important;
   }
 }
 
@@ -109,10 +118,9 @@
     width: 100% !important;
     max-width: 100%;
     overflow: hidden;
-
   }
-  .menues .menu i{
-    color: white!important;
+  .menues .menu i {
+    color: white !important;
   }
   .search {
     display: none;
@@ -197,6 +205,12 @@
   .training .col-lg-6 {
     text-align: center;
   }
+  .course-detail-right h4::before {
+    left: 0 !important;
+  }
+  #tab-menu .rating .gray {
+    width: 55% !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -221,8 +235,15 @@
   #our-blog .about-share a {
     margin-right: 20px !important;
   }
-  .teachers-static .piece, button{
-    top: 270px!important;
+  #teachers-page .teachers-static .piece {
+    top: 270px !important;
+  }
+  #teachers-page .teachers-static button {
+    top: 270px !important;
+  }
+
+  #tab-menu textarea {
+    width: 95% !important;
   }
 }
 
@@ -257,8 +278,8 @@
     top: 80px !important;
     right: 120px !important;
   }
-  #free .col-sm-6{
-    text-align: center!important;
+  #free .col-sm-6 {
+    text-align: center !important;
   }
   #online-courses .registration {
     padding: 20px !important;
@@ -296,4 +317,66 @@
     width: 100% !important;
     padding: 10px !important;
   }
+  #teachers-page .teachers-static .main-button{
+    margin-top: -10%
+  }
+
+#teachers-page .teachers-static .piece{
+  margin-top: -10%
+}
+  #tab-menu .head-menu{
+    margin: 0!important;
+    padding: 5px!important;
+    font-size: 14px;
+  }
+  #tab-menu .body-tab-menu [curriculum] h5 {
+    padding: 20px 10px !important;
+  }
+  #tab-menu .body-tab-menu [curriculum] h5 span {
+    font-size: 12px;
+  }
+  #tab-menu .body-tab-menu [curriculum] h5 .sag {
+    right: 20px;
+    font-size: 12px;
+    padding: 3px 5px 5px;
+  }
+  #tab-menu .body-tab-menu [instructor] .item {
+    padding: 25px 20px !important;
+    margin: 50px 10px !important;
+  }
+  #tab-menu .body-tab-menu [instructor] .item i {
+    margin-left: 50px;
+  }
+  #tab-menu .body-tab-menu [instructor] .item img {
+    width: 70px!important;
+  }
+  #tab-menu .body-tab-menu [instructor] .item .img {
+    top: 10px !important;
+    left: -10px !important;
+  }
+  #tab-menu .body-tab-menu [review] .teacher-say img {
+    width: 70px!important;
+  }
+  #teachers-page .teachers-static .teachers-info {
+    flex-direction: column !important;
+  }
+  #teachers-page .teachers-static .teachers-info .teach {
+    justify-content: center;
+  }
+  #teachers-page .teachers-static .teachers-info > div {
+    width: 100% !important;
+    text-align: center;
+    border-style: none!important;
+    margin: 10px;
+  }
+
+}
+@media screen and (max-width: 430px) {
+  #teachers-page .teachers-static .main-button{
+    margin-top: -40%
+  }
+
+#teachers-page .teachers-static .piece{
+  margin-top: -40%
+}
 }
