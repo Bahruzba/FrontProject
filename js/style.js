@@ -398,10 +398,6 @@ $(document).ready(function () {
             $(".timer .to-end .second").text(second);
 
         }, 1000);
-
-
-        // console.log(difference, day, hours, minute, second);
-        console.log($(".timer .time-name"));
     }
 
     timer();
