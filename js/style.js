@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     // animate onload page
+
     setTimeout(function () {
         $("#onload .left").animate({ left: "-1000px" });
         $("#onload .right").animate({ right: "-1000px" });

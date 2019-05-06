@@ -4,7 +4,7 @@
   background-color: white;
   position: fixed;
   z-index: 2000;
-  div{
+  .left, .right{
     width: 52%;
     background-color: rgb(173, 252, 255);
   padding: 200px 0;
@@ -12,8 +12,37 @@
   position: absolute;
   }
   .right{
-    right:0px;;
+    right:0px;
   }
+  .sircle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 48%;
+    top:300px;
+    .small-sircle{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border-top: 8px solid $color1;  
+      border-right: 8px solid black;  
+      border-bottom: 8px solid black;  
+      border-left: 8px solid black;  
+      position: absolute;
+      left: -2px;
+      top: -2px;
+    }
+    animation-name: aha;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+@keyframes aha {
+from {transform:rotate(0);}
+to {transform:rotate(360deg);}
 }
 
 
