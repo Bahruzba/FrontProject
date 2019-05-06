@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    // animate onload page
+    setTimeout(function () {
+        $("#onload .left").animate({ left: "-1000px" });
+        $("#onload .right").animate({ right: "-1000px" });
+    }, 1000);
+    setTimeout(function () {
+        $("#onload").animate({ opacity: "0" });
+    }, 1300)
+
+    setTimeout(function () {
+        $("#onload").remove();
+    }, 2000)
+
 
     $(".discount i").click(function () {
         $(".discount").remove();
@@ -164,18 +177,18 @@ $(document).ready(function () {
 
     //open video about us
     $("#about-us i").click(function () {
-        setTimeout(function(){
-        if ($("#about-us .video iframe").length == 0) {
-            $("#about-us").append('<div class="video d-flex justify-content-center"><div class="col-lg-8"><div class="w-100"><iframe width="560" height="315" src="https://www.youtube.com/embed/7e90gBu4pas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>')
-        }            
+        setTimeout(function () {
+            if ($("#about-us .video iframe").length == 0) {
+                $("#about-us").append('<div class="video d-flex justify-content-center"><div class="col-lg-8"><div class="w-100"><iframe width="560" height="315" src="https://www.youtube.com/embed/7e90gBu4pas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>')
+            }
         }, 50);
 
     })
-    
+
     // close video on keyup space
     $(document).keydown(function (e) {
         if (e.which == 27) {
-            closeVideo(); 
+            closeVideo();
         }
     })
 
@@ -401,6 +414,5 @@ $(document).ready(function () {
 
         }, 1000);
     }
-
     timer();
 })

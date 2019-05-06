@@ -1,3 +1,23 @@
+#onload {
+  width: 100%;
+  height: 1000px;
+  background-color: white;
+  position: fixed;
+  z-index: 2000;
+}
+
+#onload div {
+  width: 52%;
+  background-color: #adfcff;
+  padding: 200px 0;
+  height: 1000px;
+  position: absolute;
+}
+
+#onload .right {
+  right: 0px;
+}
+
 .fixed {
   position: fixed !important;
   width: 100% !important;
