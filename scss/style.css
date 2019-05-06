@@ -2493,6 +2493,7 @@ main > .container #teachers-page .teachers-static .teachers-info .review i {
 
 .course-detail-right .box:hover a {
   color: white;
+  text-decoration: none;
 }
 
 .course-detail-right .box a {

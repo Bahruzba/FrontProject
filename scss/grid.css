@@ -280,6 +280,10 @@
 }
 
 @media screen and (max-width: 576px) {
+  #onload .sircle{
+    top: 200px;
+    left: 44%;
+  }
   header .navigation img {
     width: 150px;
   }
