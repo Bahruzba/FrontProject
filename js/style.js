@@ -11,6 +11,9 @@ $(document).ready(function () {
     })
 
     $("#header .menu span").click(function () {
+        if (window.innerWidth > 992) {
+            return;
+        }
         if ($(this).parent().children("ul").hasClass("d-block") == true) {
             $(this).parent().children("ul").removeClass("d-block");
             return;
@@ -156,33 +159,32 @@ $(document).ready(function () {
 
     // function for close video about us
     function closeVideo() {
-        $("#about-us .video").addClass("d-none");
-        $("#about-us .video .col-lg-8").addClass("d-none");
-
-        $("#about-us .video iframe").remove();
-
+        $("#about-us .video").remove();
     }
 
     //open video about us
     $("#about-us i").click(function () {
-        $("#about-us .video").removeClass("d-none");
-        $("#about-us .video .col-lg-8").removeClass("d-none");
-
+        setTimeout(function(){
         if ($("#about-us .video iframe").length == 0) {
-            $("#about-us .video .w-100").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/7e90gBu4pas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-        }
+            $("#about-us").append('<div class="video d-flex justify-content-center"><div class="col-lg-8"><div class="w-100"><iframe width="560" height="315" src="https://www.youtube.com/embed/7e90gBu4pas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>')
+        }            
+        }, 50);
+
     })
+    
     // close video on keyup space
-    $("body").keydown(function (e) {
+    $(document).keydown(function (e) {
         if (e.which == 27) {
-            closeVideo();
+            closeVideo(); 
         }
     })
 
 
     // close video on click out video
-    $("#about-us .video").click(function () {
-        closeVideo();
+    $("body").click(function () {
+        if ($("#about-us .video").length == 1) {
+            closeVideo();
+        }
 
     })
 
@@ -369,7 +371,7 @@ $(document).ready(function () {
         $(this).nextAll().removeClass("fas").addClass("far");
     })
 
-    var endTime = 1564858850465;
+    var endTime = 1564948801000;
     function timer() {
         var difference, day, hours, minute, second, time;
         setInterval(function () {
