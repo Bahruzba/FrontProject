@@ -199,7 +199,6 @@ $(document).ready(function () {
         if ($("#about-us .video").length == 1) {
             closeVideo();
         }
-
     })
 
 
@@ -385,7 +384,7 @@ $(document).ready(function () {
         $(this).nextAll().removeClass("fas").addClass("far");
     })
 
-    var endTime = 1564948801000;
+    var endTime = 1593958801000;
     function timer() {
         var difference, day, hours, minute, second, time;
         setInterval(function () {
@@ -416,4 +415,36 @@ $(document).ready(function () {
         }, 1000);
     }
     timer();
+
+
+
+
+
 })
+
+function sifir(value, requiredLength) {
+    let valueLength = String(value).length;
+    let count = requiredLength - valueLength;
+    let out = `${'0'.repeat(count)}${value}`;
+    return out
+}
+
+function getDate() {
+    let text = document.getElementById("time").innerText; //Htmlden melumati goturmek goturket
+    let myDate = new Date(text).getTime(); //hemin melumati tarixe cevirib onu da millisaniyeye cevirmek
+    let nextTime = new Date(myDate + 1000); //hemin millisaniyenin ustune 1 saniye gelib tarixe yeniden cevirmek 
+
+    let day = nextTime.getDate();
+    let year = nextTime.getFullYear();
+    let month = nextTime.getMonth() + 1;
+    let hours = nextTime.getHours();
+    let minutes = nextTime.getMinutes();
+    let seconds = nextTime.getSeconds();
+
+    let out = `${year}.${month}.${sifir(day, 2)} ${sifir(hours, 2)}:${sifir(minutes, 2)}:${sifir(seconds, 2)}`;
+    
+    document.getElementById("time").innerText = out;
+}
+
+
+setInterval(getDate, 1000)
