@@ -399,7 +399,7 @@ $(document).ready(function () {
 
 
         $(".timer").prepend("<div class='to-end'></div>");
-        $(".timer .to-end").append("<span class='month'>" + 0 + "</span>");
+        //$(".timer .to-end").append("<span class='month'>" + 0 + "</span>");
         $(".timer .to-end").append("<span>:</span>");
         $(".timer .to-end").append("<span class='day'>" + 0 + "</span>");
         $(".timer .to-end").append("<span>:</span>");
