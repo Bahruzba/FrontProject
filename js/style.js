@@ -390,6 +390,7 @@ $(document).ready(function () {
         setInterval(function () {
             time = new Date;
             difference = time.getTime() - endTime ;
+            month = moment(difference).format('MM');;
             day = Math.floor(difference / 1000 / 60 / 60 / 24);
             hours = Math.floor(difference / 1000 / 60 / 60) % 24;
             minute = Math.floor(difference / 1000 / 60) % (60);
@@ -398,6 +399,8 @@ $(document).ready(function () {
 
 
         $(".timer").prepend("<div class='to-end'></div>");
+        $(".timer .to-end").append("<span class='month'>" + 0 + "</span>");
+        $(".timer .to-end").append("<span>:</span>");
         $(".timer .to-end").append("<span class='day'>" + 0 + "</span>");
         $(".timer .to-end").append("<span>:</span>");
         $(".timer .to-end").append("<span class='hours'>" + 0 + "</span>");
@@ -407,6 +410,7 @@ $(document).ready(function () {
         $(".timer .to-end").append("<span class='second'>" + 0 + "</span>");
 
         setInterval(function () {
+            $(".timer .to-end .day").text(month)
             $(".timer .to-end .day").text(day)
             $(".timer .to-end .hours").text(hours)
             $(".timer .to-end .minute").text(minute)
