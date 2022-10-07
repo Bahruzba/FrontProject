@@ -2736,11 +2736,12 @@ main > .container #teachers-page .teachers-static .teachers-info .review i {
 }
 
 .timer .time-name {
+  justify-content: center;
   text-align: center;
 }
 
 .timer .time-name span {
-  padding: 16px 10px;
+  
   font-size: 12px;
 }
 
