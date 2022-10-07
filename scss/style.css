@@ -2736,7 +2736,7 @@ main > .container #teachers-page .teachers-static .teachers-info .review i {
 }
 
 .timer .time-name {
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
 }
 
