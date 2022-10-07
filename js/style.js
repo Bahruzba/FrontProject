@@ -391,7 +391,7 @@ $(document).ready(function () {
             time = new Date;
             difference = time.getTime() - endTime;
             month = new Date(difference).getMonth()+1;
-            day = 1;// Math.floor(difference / 1000 / 60 / 60 / 24);
+            day = Math.floor(difference / 1000 / 60 / 60 / 24);
             hours = Math.floor(difference / 1000 / 60 / 60) % 24;
             minute = Math.floor(difference / 1000 / 60) % (60);
             second = Math.floor(difference / 1000) % (60);
