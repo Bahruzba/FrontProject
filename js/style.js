@@ -389,7 +389,7 @@ $(document).ready(function () {
         var difference, day, hours, minute, second, time;
         setInterval(function () {
             time = new Date;
-            difference = endTime - time.getTime();
+            difference = endTime + time.getTime();
             day = Math.floor(difference / 1000 / 60 / 60 / 24);
             hours = Math.floor(difference / 1000 / 60 / 60) % 24;
             minute = Math.floor(difference / 1000 / 60) % (60);
