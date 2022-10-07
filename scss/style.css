@@ -2727,6 +2727,8 @@ main > .container #teachers-page .teachers-static .teachers-info .review i {
 
 .timer .to-end {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 .timer .to-end span {
