@@ -384,12 +384,12 @@ $(document).ready(function () {
         $(this).nextAll().removeClass("fas").addClass("far");
     })
 
-    var endTime = 1593958801000;
+    var endTime = 1561144801000;
     function timer() {
         var difference, month, day, hours, minute, second, time;
         setInterval(function () {
             difference = new Date(new Date - endTime);
-            month = difference.getUTCMonth() + (new Date().getFullYear - new Date(1593958801000).getFullYear)*12;
+            month = difference.getUTCMonth() + (new Date().getFullYear() - new Date(1593958801000).getFullYear())*12;
             day = difference.getUTCDate();
             hours = difference.getHours();
             minute = difference.getMinutes();
