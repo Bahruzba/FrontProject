@@ -386,11 +386,11 @@ $(document).ready(function () {
 
     var endTime = 1593958801000;
     function timer() {
-        var month, difference, day, hours, minute, second, time;
+        var difference, month, day, hours, minute, second, time;
         setInterval(function () {
             time = new Date;
             difference = time.getTime() - endTime ;
-            month = moment(difference).format('MM');;
+            month = moment(difference).format('MM');
             day = Math.floor(difference / 1000 / 60 / 60 / 24);
             hours = Math.floor(difference / 1000 / 60 / 60) % 24;
             minute = Math.floor(difference / 1000 / 60) % (60);
