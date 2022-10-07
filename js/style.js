@@ -390,11 +390,11 @@ $(document).ready(function () {
         setInterval(function () {
             time = new Date;
             difference = new Date(time.getTime() - endTime);
-            month = difference.getFullYear*12 + difference.getMonth()+1;
-            day = difference.getDay;
-            hours = difference.getHours;
-            minute = difference.minute;
-            second = difference.seconds;
+            month = difference.getFullYear()*12 + difference.getMonth()+1;
+            day = difference.getDay();
+            hours = difference.getHours();
+            minute = difference.minute();
+            second = difference.seconds();
         }, 1000);
 
 
