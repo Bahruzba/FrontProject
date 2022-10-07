@@ -388,10 +388,9 @@ $(document).ready(function () {
     function timer() {
         var difference, month, day, hours, minute, second, time;
         setInterval(function () {
-            time = new Date;
-            difference = time.getTime() - endTime;
-            month = (new Date().getFullYear() - new Date(endTime).getFullYear())*12 + new Date(difference).getMonth();
-            day = difference.getDate();
+            difference = new Date - endTime;
+            month = new Date(difference).getUTCMonth();
+            day = difference.getUTCDate();
             hours = difference.getHours();
             minute = difference.getMinutes();
             second = difference.getSeconds();
