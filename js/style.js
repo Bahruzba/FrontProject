@@ -389,8 +389,8 @@ $(document).ready(function () {
         var difference, month, day, hours, minute, second, time;
         setInterval(function () {
             time = new Date;
-            difference = time.getTime() - endTime ;
-            //month = new Date(difference).format('MM');
+            difference = time.getTime() - endTime;
+            month = new Date(difference).getMonth()+1;
             day = 1;// Math.floor(difference / 1000 / 60 / 60 / 24);
             hours = Math.floor(difference / 1000 / 60 / 60) % 24;
             minute = Math.floor(difference / 1000 / 60) % (60);
