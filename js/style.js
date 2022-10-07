@@ -389,12 +389,12 @@ $(document).ready(function () {
         var difference, month, day, hours, minute, second, time;
         setInterval(function () {
             time = new Date;
-            difference = new Date(time.getTime() - endTime);
-            month = difference.getFullYear()*12 + difference.getMonth()+1;
-            day = difference.getDay();
-            hours = difference.getHours();
-            minute = difference.minute();
-            second = difference.seconds();
+            difference = time.getTime() - endTime;
+            month = new Date().getMonth() - new Date(endTime).getMonth();
+            day = Math.floor(difference / 1000 / 60 / 60 / 24);
+            hours = Math.floor(difference / 1000 / 60 / 60) % 24;
+            minute = Math.floor(difference / 1000 / 60) % (60);
+            second = Math.floor(difference / 1000) % (60);
         }, 1000);
 
 
