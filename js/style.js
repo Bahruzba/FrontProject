@@ -391,7 +391,7 @@ $(document).ready(function () {
             time = new Date;
             difference = time.getTime() - endTime ;
             month = moment(difference).format('MM');
-            day = Math.floor(difference / 1000 / 60 / 60 / 24);
+            day = 1;// Math.floor(difference / 1000 / 60 / 60 / 24);
             hours = Math.floor(difference / 1000 / 60 / 60) % 24;
             minute = Math.floor(difference / 1000 / 60) % (60);
             second = Math.floor(difference / 1000) % (60);
@@ -410,7 +410,7 @@ $(document).ready(function () {
         $(".timer .to-end").append("<span class='second'>" + 0 + "</span>");
 
         setInterval(function () {
-           // $(".timer .to-end .month").text(month)
+            $(".timer .to-end .month").text(month)
             $(".timer .to-end .day").text(day)
             $(".timer .to-end .hours").text(hours)
             $(".timer .to-end .minute").text(minute)
