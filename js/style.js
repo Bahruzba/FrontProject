@@ -389,7 +389,7 @@ $(document).ready(function () {
         var difference, month, day, hours, minute, second, time;
         setInterval(function () {
             difference = new Date(new Date - endTime);
-            month = difference.getUTCMonth();
+            month = difference.getUTCMonth() + (new Date().getFullYear - new Date(1593958801000).getFullYear)*12;
             day = difference.getUTCDate();
             hours = difference.getHours();
             minute = difference.getMinutes();
