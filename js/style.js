@@ -390,7 +390,7 @@ $(document).ready(function () {
         setInterval(function () {
             time = new Date;
             difference = time.getTime() - endTime ;
-            month = Date(difference).format('MM');
+            month = new Date(difference).format('MM');
             day = 1;// Math.floor(difference / 1000 / 60 / 60 / 24);
             hours = Math.floor(difference / 1000 / 60 / 60) % 24;
             minute = Math.floor(difference / 1000 / 60) % (60);
